@@ -1,0 +1,98 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+.panel {
+	height: 207px;
+	border-radius: 0;
+	@extend %panel;
+	/*股指面板搜索框*/
+	.pnlTtl {
+		height: 42px;
+		h2 {
+			display: inline-block;
+			margin: 12px 0 10px 5px;
+			outline: none;
+			
+			color: #0873c0;
+			font-size: 14px;
+			font-weight: 700;
+			text-indent: 5px;
+		}
+		/*搜索栏*/
+		.form {
+			float: right;
+			width: 180px;
+			margin: 5px 5px 0 0;
+			/*输入框*/
+			#searchIpt {
+				width: 120px;
+			}
+		}
+	}
+	/*不同金融地区选择面板*/
+	.index-list {
+		width: 200px;
+		height: 22px;
+		margin: 10px auto;
+		li {
+			float: left;
+			width: 47px;
+			height: 22px;
+			border-right: 1px solid #dde7f2;
+			overflow: hidden;
+			
+			line-height: 22px;
+			text-align: center;
+			cursor: pointer;
+			&.selected {
+				background: #458fce;
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+	/*不同金融地区指数情况*/
+	.financeContent {
+		overflow: hidden;
+		.imgArea-stk {
+			float: left;
+			margin: 3px 0 0 5px;
+			img{
+				border:1px solid #d2e0ef;
+			}
+		}
+		
+		.txtArea-stk {
+			float: left;
+			margin-left: 15px;
+			.stkName a {
+				color: #374562;
+				font-size: 12px;
+			}
+			.stkPrice {
+				font: bold 20px/38px Tahoma;
+				color: rgb(204, 0, 0);
+			}
+			.stkChange{
+				color: rgb(204, 0, 0);
+			}
+		}
+	}
+	/*登录自选股*/
+	.user-stk {
+		margin: 0 0 0 10px;
+		
+		a {
+			color: #374562;
+			font-size: 13px;
+		}
+	}
+}
+
+
+
+
+

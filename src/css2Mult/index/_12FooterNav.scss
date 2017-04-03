@@ -1,0 +1,65 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+
+#footer {
+	height: 50px;
+}
+
+/*底部固定导航*/
+#floatNav {
+	left: 50%;
+	width: 1000px;
+	min-height: 38px;
+	border: none;
+	
+	display: none;
+	text-align: center;
+	
+	background: #0873c0 linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-clip: content-box;
+	
+	transform: translate(-50.9%, 0);
+	#myScrollspy {
+		.nav {
+			position: fixed;
+			left: 50%;
+			width: 900px;
+			height: 35px;
+			border: none;
+
+			transform: translate(-50%, 0%);
+		}
+		.nav > li > a {
+			display: inline-block;
+			padding: 2px 5px;
+			line-height: 35px;
+			@extend %fontFamArialNar;
+		}
+		.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+			color: #0873c0;
+			line-height: 35px;
+		}
+		.nav a {
+			color: #f0f5fc;
+		}
+		.nav > li > a:hover, .nav > li > a:focus {
+			color: #0873c0;
+			line-height: 35px;
+		}
+	}
+}
+
+@media screen and (max-width: 1214px) {
+	#myScrollspy {
+		.nav {
+			left: 65%;
+			transform: translate(-50%, 0%);
+		}
+		.nav > li:nth-child(even) {
+			display: none;
+		}
+	}
+}

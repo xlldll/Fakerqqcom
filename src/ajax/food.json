@@ -1,0 +1,24 @@
+{
+	"image_text": {
+		"src": "images/content/food.jpg",
+		"alt": "深圳10条人气美食街 这都不知道你就out啦！",
+		"href": "javascript:void(0);"
+	},
+	"news": [
+		{
+			"title": "与“粽”不同的父亲节福利 众多大奖等你带回家",
+			"href": "javascript:void(0);",
+			"clas": ""
+		},
+		{
+			"title": "清凉一夏 教你做最地道的马来西亚消暑拉茶",
+			"href": "javascript:void(0);",
+			"clas": ""
+		},
+		{
+			"title": "这Q弹鲜美！快来一打潮汕手打牛肉丸",
+			"href": "javascript:void(0);",
+			"clas": ""
+		}
+	]
+}

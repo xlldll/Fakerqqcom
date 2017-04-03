@@ -1,0 +1,26 @@
+{
+	"name": "bowerjson",
+	"description": "no",
+	"authors": [
+		"linchuqiang"
+	],
+	"license": "MIT",
+	"keywords": [
+		"no"
+	],
+	"homepage": "no",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"requirejs": "^2.2.0",
+		"bootstrap-sass": "*",
+		"holderjs": "*"
+	},
+	"devDependencies": {},
+	"exportsOverride": {}
+}

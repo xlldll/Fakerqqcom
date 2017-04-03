@@ -1,0 +1,92 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/************************
+首栏右侧_产品指引
+*************************/
+
+#pronav {
+	height: 248px;
+	@extend %panel;
+	@extend %clearfix;
+}
+
+/*产品列表一*/
+#table {
+	float: right;
+	position: relative;
+	margin-bottom: 10px;
+	
+	background: #fff;
+	border: 1px solid $tabBorderTop;
+	tr td a {
+		padding: 10px 0;
+		color: #294c7f;
+		@extend %fontFamArialNar;
+	}
+	> tbody > tr > td {
+		padding: 5px 5px;
+		border: none;
+		line-height: 28px;
+	}
+}
+
+/*隐藏的产品列表*/
+#table1 {
+	display: none;
+	position: absolute;
+	right: 400px;
+	top: 0;
+	width: 401px;
+	height: 248px;
+	
+	background: #fff;
+	
+	text-align: center;
+	border: 1px solid $tabBorderTop;
+	border-right: none;
+	tr td a {
+		color: #294c7f;
+		padding: 10px 0;
+		@extend %fontFamArialNar;
+	}
+	> tbody > tr > td {
+		padding: 5px 5px;
+		border: none;
+		line-height: 28px;
+	}
+}
+
+
+/*产品浮动指示框*/
+.float14 {
+	right: 13px;
+}
+
+/*产品浮动指示框hover*/
+.productFloatBtn.float378 {
+	right: 413px;
+/*	@include bg($imgUrl: 'QPng/productFloatBtn.png', $h: right, $v: bottom);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-240px);
+	&:hover {
+		/*@include bg($imgUrl: 'QPng/productFloatBtn.png', $h: right, $v: bottom);*/
+		/*@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-100px);*/
+	}
+}
+
+.productFloatBtn {
+	position: relative;
+	top: -258px;
+	
+	/*@include bg($imgUrl: 'QPng/productFloatBtn.png', $h: right, $v: top);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-166px);
+	width: 14px;
+	height: 37px;
+	overflow: hidden;
+	&:hover {
+		/*@include bg($imgUrl: 'QPng/productFloatBtn.png', $h: right, $v: -80px);*/
+		@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-203px);
+	}
+}

@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html>
+<head lang = "zh-CN">
+	<base href = "http://fakerqqcom:8080/src/" target = "_self" >
+	<!--<base href = "http://fakerqqcom:8080/dist/" target = "_self" >-->
+	<!--字符编码-->
+	<meta charset="UTF-8">
+	<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
+	<!--IE兼容模式 用<meta>指定页面应该用什么版本的IE来渲染-->
+	<meta http-equiv = "x-ua-compatible" content = "IE=edge">
+	<!--禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉-->
+	<!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">-->
+	<title>仿腾讯首页</title>
+	<link rel = "shortcut icon" href = "images/tencent.ico" >
+	<link rel = "stylesheet" href = "css2Min/normalize/normalize-5.css" >
+	<link rel = "stylesheet" href = "css2Min/bootstrap.min.css" >
+	<link rel = "stylesheet" href = "css2Mult/replaceBootstrap.css" >
+	<link rel = "stylesheet" href = "css2Mult/index.css" >
+	
+	<!--DEST-->
+	<!--<link rel = "stylesheet" href = "css/normalize/normalize-5.min.css" >
+	<link rel = "stylesheet" href = "css/bootstrap.min.css" >
+	<link rel = "stylesheet" href = "css/indexRbs.min.css" >-->
+	
+	<!--[if lt IE 9]>
+	<script src = "http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src = "http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!--WS监测-->
+	<script src = "http://fakerqqcom:35729/livereload.js"></script>
+</head>
+<!--通过 data 属性 实行 滚动监听（Scrollspy）插件-->
+<!--随着页面滚动实现高亮导航并关联到当前导航-->
+<body data-spy = "scroll" data-target = "#myScrollspy">
+<div class = "container">
+	<!--页头-->
+	<div id = "header" class = "row">
+		<div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id="festival">
+			<img class="lazy" data-original="images/1Header/dragonBoatF_logo.png" width="150" height="115" alt = "" src="">
+		</div>
+		<div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10" style = "margin-top: 25px;">
+			<div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div id = "logo">TencentQQ.com</div>
+			</div>
+			<div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7" style = "padding-top:5px;">
+				<!--Bootstrap 输入框组 input-group-->
+				<div class = "input-group">
+					<div class = "input-group-btn">
+						<button type = "button" class = "btn btn-default">网页</button>
+						<button class = "btn btn-default dropdown-toggle" data-toggle = "dropdown" aria-expanded = "false" type = "button">
+							<span class = "caret"></span><span class = "sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class = "dropdown-menu" role = "menu">
+							<li role = "presentation">
+								<a href = "javascript:void(0);" tabindex = "-1" role = "menuitem">图片</a>
+							</li>
+							<li role = "presentation">
+								<a href = "javascript:void(0);" tabindex = "-1" role = "menuitem">视频</a>
+							</li>
+							<li role = "presentation">
+								<a href = "javascript:void(0);" tabindex = "-1" role = "menuitem">音乐</a>
+							</li>
+							<li role = "presentation">
+								<a href = "javascript:void(0);" tabindex = "-1" role = "menuitem">地图</a>
+							</li>
+						</ul>
+					</div>
+					<input type = "text" class = "form-control" >
+					
+					<div class = "input-group-addon" id = "sogo"></div>
+					<div class = "input-group-btn">
+						<a href = "javascript:void(0);" class = "btn btn-primary">搜狗搜索</a>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" style = "height:43px; line-height: 43px; padding-left: 15px;">
+				<a href = "javascript:void(0);" class = "btn btn-toolbar" role = "button" id = "microBlog"></a>
+				<a href = "javascript:void(0);" class = "btn btn-toolbar" role = "button" id = "qqZone"></a>
+				<a href = "javascript:void(0);" class = "btn btn-toolbar" role = "button" id = "qqMail"></a>
+				<a href = "javascript:void(0);" class = "btn btn-toolbar" role = "button" id = "qqRss"></a>
+				<a href = "javascript:void(0);" class = "btn btn-info" role = "button">登录</a>
+			</div>
+		</div>
+	</div>
+	<!--节日横幅-->
+	<div class = "row" id = "banner">
+		<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<img class="lazy" data-original="images/2Festival/dargonBoat_banner.png" width="1000" height="164" alt = "" src="">
+		</div>
+	</div>
+	<!--导航条-->
+	<div class = "row" id = "navBar" style = "">
+		<ul class = "navBarInner">
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">新闻</a>
+				</strong>
+				<a href = "javascript:void(0);">图片</a>
+				<a href = "javascript:void(0);">军事</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">视频</a>
+				</strong>
+				<a href = "javascript:void(0);">热剧</a>
+				<a href = "javascript:void(0);">综艺</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">娱乐</a>
+				</strong>
+				<a href = "javascript:void(0);">明星</a>
+				<a href = "javascript:void(0);">电影</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">汽车</a>
+				</strong>
+				<a href = "javascript:void(0);">车型</a>
+				<a href = "javascript:void(0);">购物</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">科技</a>
+				</strong>
+				<a href = "javascript:void(0);">数码</a>
+				<a href = "javascript:void(0);">手机</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">教育</a>
+				</strong>
+				<a href = "javascript:void(0);">课程</a>
+				<a href = "javascript:void(0);">出国</a>
+			</li>
+			<li style = "width:94px;  padding-left: 4px;">
+				<strong>
+					<a href = "javascript:void(0);">公益</a>
+				</strong>
+				<a href = "javascript:void(0);">佛学</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">财经</a>
+				</strong>
+				<a href = "javascript:void(0);">证券</a>
+				<a href = "javascript:void(0);">理财</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">体育</a>
+				</strong>
+				<a href = "javascript:void(0);">NBA</a>
+				<a href = "javascript:void(0);">中超</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">时尚</a>
+				</strong>
+				<a href = "javascript:void(0);">健康</a>
+				<a href = "javascript:void(0);">育儿</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">房产</a>
+				</strong>
+				<a href = "javascript:void(0);">家居</a>
+				<a href = "javascript:void(0);">家电</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">游戏</a>
+				</strong>
+				<a href = "javascript:void(0);">儿童</a>
+				<a href = "javascript:void(0);">星座</a>
+			</li>
+			<li>
+				<strong>
+					<a href = "javascript:void(0);">文化</a>
+				</strong>
+				<a href = "javascript:void(0);">大家</a>
+				<a href = "javascript:void(0);">文学</a>
+			</li>
+			<li style = "width:80px;">
+				<strong>
+					<a href = "javascript:void(0);">拍客</a>
+				</strong>
+			</li>
+			<div class = "navMoreLayout">
+				<div id = "navMore">
+					<span class = "arrow">更多 </span>
+					<ul id = "ulMore">
+						<li>
+							<a href = "javascript:void(0);">天气</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);">港股</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);">西甲</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);">音乐</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);">美容</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);">动漫</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);">全部</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</ul>
+	</div>
+	<!--导航广告-->
+	<div class = "row" id = "navAd">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 navAd_left">
+			<img class="lazy" data-original="images/4Ads/0navAdL.png" width="666" height="75" alt = "" src="">
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 navAd_right">
+			<img class="lazy" data-original="images/4Ads/0navAdR.png" width="280" height="75" alt = "" src="">
+		</div>
+	</div>
+	<!--首栏内容-->
+	<div class = "row" id = "firstContent">
+		<!--首栏左侧_标签页-->
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div data-example-id = "togglable-tabs" role = "tabpanel">
+				<!--标签-->
+				<ul  class = "nav nav-tabs" id = "newsTab" role = "tablist">
+					<!--要闻标签-->
+					<li class = "active" role = "presentation">
+						<a aria-expanded = "true" aria-controls = "importantNews" data-toggle = "tab" role = "tab" id = "importantNews-tab" href = "#importantNews">要闻</a>
+					</li>
+					<!--广东新闻标签-->
+					<li role = "presentation">
+						<a aria-controls = "GuangDongNews" data-toggle = "tab" id = "GuangDongNews-tab" role = "tab" href = "#GuangDongNews" aria-expanded = "false">广东新闻</a>
+					</li>
+					<li id = "weatherLayout">
+						<span id = "ipWeather">深圳</span>
+						<span id = "weatherTemperature">29℃</span>
+						<img class="lazy" data-original="images/QPng/rainy1.png" width="16" height="16" alt = "" src="">
+					</li>
+				</ul>
+				<!--标签内容-->
+				<div class = "tab-content">
+					<div class = "tab-pane fade active in" id = "importantNews" role = "tabpanel"  aria-labelledby = "importantNews-tab" >
+						<a class = "btn btn-sm btn-block" id = "loadMore" href = "javascript:void(0);" role = "button" >加载更多未读新闻</a>
+						<div id = "content1">
+							<ul>
+								<li>
+									<a href="javascript:void(0);" class="strong qvp">习近平：确保农村贫困人口到2020年如期脱贫</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qvp">李克强部署撬动沉睡资金</a> <a href="javascript:void(0);">考察工信部</a>
+									<a href="javascript:void(0);">创新创业</a></li>
+								<li>
+									<a href="javascript:void(0);">抗战胜利纪念日阅兵安排下周将公布</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="strong">晚清民族英雄刘永福墓遭盗挖 当地被批保护不力</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qvp">“猎狐”从印尼抓回6嫌犯 3人为红通令逃犯(图)</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qpp">印度总理莫迪带领4.5万名民众秀瑜伽创纪录</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">南京宝马司机撞死2人 嫌犯家属：不信他会开快车</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">江苏3岁失踪女童被证实死亡 尸体在池塘内发现</a>
+								</li>
+							</ul>
+						</div>
+						<div id = "content2">
+							<div class="imgArea">
+								<a href="javascript:void(0);">
+									<img class="lazy" data-original="images/content/importantNews1.jpg" width="108" height="70" alt = "" src="">
+								</a>
+							</div>
+							<div class="txtArea">
+								<a href="javascript:void(0);"><strong>大连高校奢华的浪漫：大学生租直升机求婚</strong></a>
+							</div>
+							<ul>
+								<li>
+									<a href="javascript:void(0);" class="qvp">女足世界杯-中国1-0喀麦隆 时隔8年再进8强</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">湖南16岁学生跳楼身亡 事发前曾在班主任面前下跪</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qpp">美国62岁不老模特拍摄内衣广告 身材火辣</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">男子高速路上单手开车搂女人 偏离车道被罚(图)</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qvp">村民忙农活遭五步蛇咬伤 用尽力气爬回家求救</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">第36次中国互联网络发展状况在线调查启动</a>
+									<a href="javascript:void(0);" class="">问卷</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qpp">日本主妇手工刺绣逼真如照片</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qpp">80后成离婚潮“主力军” 速结速离令父母大跌眼镜</a>
+								</li>
+							</ul>
+						</div>
+						<div id = "content3">
+							<div class="imgArea">
+								<a href="javascript:void(0);">
+									<img class="lazy" data-original="images/content/importantNews2.jpg" width="108" height="70" alt = "" src="">
+								</a>
+							</div>
+							<div class="txtArea">
+								<a href="javascript:void(0);"><strong>河马为保护幼子冲上岸 撕咬鳄鱼</strong></a>
+							</div>
+							<ul>
+								<li>
+									<a href="javascript:void(0);" class="qvp">黄晓明终于吻到初恋女神赵薇 害羞称还是会脸红</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qvp">孙俪出奇招为邓超过父亲节 儿子等等拔老爸腿毛</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qvp">殴打林俊杰男子潜逃遭通缉 打工暴露行踪被捕</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qvp">杨幂刘恺威女儿正面曝光 看看到底像谁？ </a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qpp">杨子晒一对儿女照片 黄圣依儿子正面照曝光</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="qpp">80后成离婚潮“主力军” 速结速离令父母大跌眼镜</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">全球瑜伽日 莫迪率4.5万印度人同秀瑜伽创纪录</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">农户卖牛被买家用冰毒抵款 转卖被抓获死缓</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="">揭秘卵子买卖黑中介：“客户”最看重外表学历</a>
+								</li>
+							</ul>
+						</div>
+						<div id = "kangzhan70">
+							<div class = "kangzhan70logo">
+								<a title = "腾讯网纪念抗战胜利70周年" href = "javascript:void(0);">
+									
+								</a>
+							</div>
+							<a href = "javascript:void(0);">图话：重新记忆抗日战俘，还原历史全貌</a>
+							<br>
+							<a href = "javascript:void(0);">短史记</a>
+							|
+							<a href = "javascript:void(0);">被彻底遗忘的“中国父亲节”</a>
+						</div>
+					</div>
+					<div class = "tab-pane fade" id = "GuangDongNews" role = "tabpanel"  aria-labelledby = "GuangDongNews-tab">
+						<div id = "gdnews">
+							<ul></ul>
+						</div>
+						<div id="gdnews1">
+							<div class="imgArea">
+								<a href="javascript:void(0);"><img alt="" src=""></a>
+							</div>
+							<div class="txtArea">
+								<a href="javascript:void(0);"><strong></strong></a>
+							</div>
+							<ul></ul>
+						</div>
+						<div id="gdnews2">
+							<div class="imgArea">
+								<a href="javascript:void(0);"> <img alt="" src=""></a>
+							</div>
+							<div class="txtArea">
+								<a href="javascript:void(0);" ><strong></strong></a>
+							</div>
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--首栏中侧_今日系列-->
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4" style = "margin: 0 20px;">
+			<!--今日话题-->
+			<div class = "today">
+				<div class = "header2">
+					<h2>
+						<a href = "javascript:void(0);">今日话题</a>
+					</h2>
+				</div>
+				<div>
+					<h3 class = "header3">
+						<a href = "javascript:void(0);">证监会女处长老公炒股，绝不能容</a>
+					</h3>
+					<ul class = "todayTopic">
+						<li>
+							<a href = "javascript:void(0);" class = "fleft">耻与痛，不应在被性侵儿童的家庭中蔓延</a>
+							<a class = "fright cBlue" href = "javascript:void(0);">往期</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);" class = "fleft">探亲假若要保留，应人人平等</a>
+							<a class = "fright cBlue" href = "javascript:void(0);">评论</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);" class = "fleft">许纪霖：国民党如何失去知识分子的支持</a>
+							<a class = "fright cBlue" href = "javascript:void(0);">历史</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);" class = "fleft">美联储加息是纸老虎</a>
+							<a class = "fright cBlue" href = "javascript:void(0);">财经观察</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);" class = "fleft">秦晖：法家使天下陷入军备竞赛</a>
+							<a class = "fright cBlue" href = "javascript:void(0);">思想</a>
+						</li>
+						<li>
+							<a href = "javascript:void(0);" class = "fleft">拖延症不是绝症 我们还有救！</a>
+							<a href = "javascript:void(0);" class = "fright cBlue">入流</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--今日热播-->
+			<div id = "today1" style = "margin:15px 0;">
+				<!--标签-->
+				<div data-example-id = "togglable-tabs" role = "tabpanel">
+					<ul role = "tablist" class = "nav nav-tabs" id = "todayTab">
+						<!--今日热播标签-->
+						<li class = "active" role = "presentation">
+							<a id = "todayVideo-tab" href = "#todayVideo" aria-expanded = "true" aria-controls = "todayVideo" data-toggle = "tab" role = "tab">今日热播</a>
+						</li>
+						<!--今日影视标签-->
+						<li role = "presentation">
+							<a id = "todayMovie-tab" href = "#todayMovie" aria-expanded = "true" aria-controls = "todayMovie" data-toggle = "tab" role = "tab">今日影视</a>
+						</li>
+					</ul>
+					<div class = "tab-content">
+						<!--今日热播内容-->
+						<div aria-labelledby = "todayVideo-tab" id = "todayVideo" class = "tab-pane fade active in" role = "tabpanel">
+							<div class = "vnews">
+								<div class="img-text">
+									<div class="vnews1">
+										<div>
+											<a href="javascript:void(0);">
+												<img class="lazy" data-original="images/content/todayVideo1.jpg" width="145" height="80" alt = "" src="">
+											</a>
+										</div>
+										<p><a href="javascript:void(0);">司机高速上边打吊瓶边开车</a></p>
+									</div>
+									<div class="vnews2">
+										<div >
+											<a href="javascript:void(0);">
+												<img class="lazy" data-original="images/content/todayVideo2.jpg" width="145" height="80" alt = "" src="">
+											</a>
+										</div>
+										<p><a href="javascript:void(0);">孙红雷使诈惹哭张艺兴</a></p>
+									</div>
+								</div>
+								<ul>
+									<li>
+										<a href="javascript:void(0);" class="qvp">河北枪击案监控曝光</a> <a href="javascript:void(0);">猛男数秒撂倒千斤大公牛</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">3岁男童遭婶婶泼开水烫伤</a> <a href="javascript:void(0);">牛人悬崖跳水刺激场面</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">娱乐</a> | <a href="javascript:void(0);">杨幂女儿正面照曝光</a>
+										<a href="javascript:void(0);">黄晓明“激吻”赵薇</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">综艺</a> | <a href="javascript:void(0);">任性夫妇湿身秀恩爱</a>
+										<a href="javascript:void(0);">谭维维忆姚贝娜飙泪</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">时尚生活</a> | <a href="javascript:void(0);">女星穿肚兜风情万种</a>
+										<a href="javascript:void(0);">夏至养心出对汗</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">搞笑</a> | <a href="javascript:void(0);">少年在宿舍模仿金星</a>
+										<a href="javascript:void(0);">爆笑西游之光棍危机</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">体育</a> | <a href="javascript:void(0);">泳装美女爆笑出糗集锦</a>
+										<a href="javascript:void(0);">麦蒂整场戏耍乔丹</a></li>
+									<li>
+										<a href="javascript:void(0);" class="qvp">微电影</a> | <a href="javascript:void(0);">毕业情侣难渡生活辛酸</a>
+										<a href="javascript:void(0);">外刚内柔铁汉子</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--今日影视内容-->
+						<div id = "todayMovie" class = "tab-pane fade" role = "tabpanel">
+							<div class = "mnews">
+								<div class="img-text">
+									<div class="vnews1" class="fl">
+										<div >
+											<a href="javascript:void(0);"><img src="images/content/todayMovie1.jpg" alt="《暗黑者2》8月良心回归 "></a>
+										</div>
+										<p>
+											<a href="javascript:void(0);">《暗黑者2》8月良心回归 </a>
+										</p>
+									</div>
+									<div class="vnews2" class="fr">
+										<div>
+											<a href="javascript:void(0);"><img src="images/content/todayMovie2.jpg" alt="《爱我就陪我看电影》"></a>
+										</div>
+										<p><a href="javascript:void(0);">《爱我就陪我看电影》</a>
+										</p>
+									</div>
+								</div>
+								<ul></ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!--大家爱看-->
+			<div class = "today2">
+				<div class = "header2">
+					<h2>
+						<a href = "javascript:void(0);">大家爱看</a>
+						<span>
+							<a href = "javascript:void(0);">
+								<img data-src = "images/QPng/more.png" src="" alt = "" >
+							</a>
+						</span>
+						<span>
+							<a href = "javascript:void(0);">
+								<img data-src = "images/QPng/refresh.png" src="" alt = "" >
+							</a>
+						</span>
+					</h2>
+				</div>
+				<div class = "ikan">
+					<div class="imgArea">
+						<span></span>
+						<a href="javascript:void(0);">
+							<img class="lazy" data-original="images/content/ikan1.jpg" width="108" height="70" alt = "" src="">
+						</a>
+					</div>
+					<div class="txtArea">
+						<a href="javascript:void(0);" class="strong">一句话形容你的专业 学弟学妹表示要跪了</a><br/>
+						<span><a href="javascript:void(0);">22次</a></span>
+						<span><a href="javascript:void(0);">转播</a> | <a href="javascript:void(0);">评论</a></span>
+					</div>
+					<ul>
+						<li>
+							<a href="javascript:void(0);">厨房时间 可乐鸡翅什么的最棒了！</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">国外的超豪华监狱 感觉进去就不想出来了</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">“钢铁侠”晒合影 奇葩的原因终于找到了</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">这是一个暖男和汪星人的泪崩故事</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">你们城里人真会玩 快放开那只蜗牛！</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">夕阳照进海边玻璃教堂 美的让人窒息</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">人物系列摄影《他们》：带着颓废和欲望</a>
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+			<!--today2-->
+		</div>
+		<!--首栏右侧_产品指引-->
+		<div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3" style = "margin: 0 0 0 13px;">
+			
+			<div id = "pronav">
+				<!--产品列表一-->
+				<table id = "table" class = "table table-striped table-condensed">
+					<tbody>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">QQ</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">邮箱</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">会员</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">电脑管家</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">软件</a>
+						</td>
+						<td>
+							<img data-src = "images/QPng/7ProductNav/proNav-love.png" alt = "" src="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">微信</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">空间</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">课堂</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">好莱坞</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">腾讯云</a>
+						</td>
+						<td>
+							<img data-src = "images/QPng/7ProductNav/proNav-user.png" alt = "" src="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">微视</a>
+							<br>
+							<a href = "javascript:void(0);">视频</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">新闻</a>
+							<br>
+							<a href = "javascript:void(0);">手机</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">APP</a>
+							<br>
+							<a href = "javascript:void(0);">管家</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">自选股</a>
+							<br>
+							<a href = "javascript:void(0);">看比赛</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">浏览器</a>
+							<br>
+							<a href = "javascript:void(0);">应用宝</a>
+						</td>
+						<td style = "padding: 15px 0 0 9px;">
+							<img data-src = "images/QPng/7ProductNav/proNav-phone.png" alt = "" src="">
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">暖暖</a>
+							<br>
+							<a href = "javascript:void(0);">CF</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">爱玩</a>
+							<br>
+							<a href = "javascript:void(0);">LOL</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">洛克</a>
+							<br>
+							<a href = "javascript:void(0);">逆战</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">使命召唤</a>
+							<br>
+							<a href = "javascript:void(0);">火影OL</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">DNF</a>
+							<br>
+							<a href = "javascript:void(0);">炫舞</a>
+						</td>
+						<td style = "padding: 15px 0 0 5px;">
+							<img data-src = "images/QPng/7ProductNav/proNav-game.png" alt = "" src="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">京东</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">拍拍</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">Q币</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">财付通</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">全部</a>
+						</td>
+						<td>
+							<img data-src = "images/QPng/7ProductNav/proNav-drink.png" alt = "" src="">
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<!--隐藏的产品列表-->
+				<table id = "table1" class = "table table-striped table-condensed" style = "">
+					<tbody>
+					<tr>
+						<td>
+							<a id = "qqProduct" href = "javascript:void(0);">更多</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ旋风</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ影像</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ影音</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ拼音</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">微云</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">认证空间</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">黄钻</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ秀</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">相册</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">红钻</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">绿钻</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan = "2">
+							<a href = "javascript:void(0);">手机QQ空间</a>
+							<br>
+							<a href = "javascript:void(0);">手机微博</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">手游宝</a>
+							<br>
+							<a href = "javascript:void(0);">QQ团购</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ音乐</a>
+							<br>
+							<a href = "javascript:void(0);">QQ阅读</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">同步助手</a>
+							<br>
+							<a href = "javascript:void(0);">QQ网购</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">路宝</a>
+							<br>
+							<a href = "javascript:void(0);">QQ旅游</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan = "2">
+							<a href = "javascript:void(0);">全民突击</a>
+							<br>
+							<a href = "javascript:void(0);">枪神纪</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">剑灵</a>
+							<br>
+							<a href = "javascript:void(0);">QQ农场</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">斗战神</a>
+							<br>
+							<a href = "javascript:void(0);">QQ游戏</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">轩辕</a>
+							<br>
+							<a href = "javascript:void(0);">FIFA</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">飞车</a>
+							<br>
+							<a href = "javascript:void(0);">御龙</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href = "javascript:void(0);">易迅网</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ电影票</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">高朋网</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">美食</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">彩贝</a>
+						</td>
+						<td>
+							<a href = "javascript:void(0);">QQ彩票</a>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<div class = "productFloatBtn float14"></div>
+			</div>
+			<!--京东广告轮播-->
+			<div id = "myCarousel" class = "carousel slide">
+				<!-- 轮播指示器 -->
+				<ol class = "carousel-indicators">
+					<li data-target = "#myCarousel" data-slide-to = "0"></li>
+					<li data-target = "#myCarousel" data-slide-to = "1"></li>
+					<li data-target = "#myCarousel" data-slide-to = "2"></li>
+					<li data-target = "#myCarousel" data-slide-to = "3" class = "active"></li>
+					<li data-target = "#myCarousel" data-slide-to = "4"></li>
+				</ol>
+				<!-- 轮播（Carousel）项目 -->
+				<div class = "carousel-inner">
+					<div class = "item">
+						<a href = "javascript:void(0);">
+							<img class="lazy" data-original="images/4Ads/jd.jpg"  width="250" height="250" alt = "" src="">
+						</a>
+						<ul>
+							<li class = "jdAdName">【金幻】卧室灯LED吸顶灯现代简约田园温馨客厅书房餐厅阳台灯过道灯圆形灯具 木艺圆系 花藤30CM正白光12W</li>
+							<li class = "jdAdCred">
+								<p class = "jdAdLeft">
+									<span>¥98.00</span>
+								</p>
+								<span>3212好评</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "item">
+						<a href = "javascript:void(0);">
+							<img class="lazy" data-original="images/4Ads/jd1.jpg"  width="250" height="250" alt = "" src="">
+						</a>
+						<ul>
+							<li class = "jdAdName">【本韵】和田玉转运珠吊坠路路通男女款玉石项链 墨玉款</li>
+							<li class = "jdAdCred">
+								<p class = "jdAdLeft">
+									<span>¥476.00</span>
+								</p>
+								<span>158好评</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "item">
+						<a href = "javascript:void(0);">
+							<img class="lazy" data-original="images/4Ads/jd4.jpg"  width="250" height="250" alt = "" src="">
+						</a>
+						<ul>
+							<li class = "jdAdName">美的(Midea) F40-15A1 40升 电热水器</li>
+							<li class = "jdAdCred">
+								<p class = "jdAdLeft">
+									<span>¥699.00</span>
+								</p>
+								<span>22782好评</span>
+								<span>白条分期</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "item">
+						<a href = "javascript:void(0);">
+							<img class="lazy" data-original="images/4Ads/jd2.jpg"  width="250" height="250" alt = "" src="">
+						</a>
+						<ul>
+							<li class = "jdAdName">帕森（PARZIN）太阳镜男款偏光驾驶镜司机男士大框墨镜蛤蟆眼镜8009 黑框黑灰片</li>
+							<li class = "jdAdCred">
+								<p class = "jdAdLeft">
+									<span>¥119.00</span>
+								</p>
+								<span>8970好评</span>
+							</li>
+						</ul>
+					</div>
+					<div class = "item active">
+						<a href = "javascript:void(0);">
+							<img class="lazy" data-original="images/4Ads/jd3.jpg"  width="250" height="250" alt = "" src="">
+						</a>
+						<ul>
+							<li class = "jdAdName">奥克斯（AUX）FR-F3001EZ-4 3L智能电饭煲 不锈钢外壳（紫色）</li>
+							<li class = "jdAdCred">
+								<p class = "jdAdLeft">
+									<span>¥149.00</span>
+								</p>
+								<span>3380好评</span>
+								<span>白条分期</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 轮播内容浮现左右控制 -->
+				<a class = "carousel-control left" href = "#myCarousel" data-slide = "prev">
+					<span class = "glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class = "carousel-control right" href = "#myCarousel" data-slide = "next">
+					<span class = "glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+			<!--股指面板-->
+			<div class = "panel">
+				<!--面板标题和搜索框-->
+				<div class = "pnlTtl">
+					<h2>
+						<a href = "javascript:void(0);">市场行情</a>
+					</h2>
+					
+					<form action = "#" class = "form" role = "form">
+						<div class = "input-group input-group-sm">
+							<label for = "searchIpt" class = "sr-only">名称</label>
+							<input id = "searchIpt" type = "text" class = "form-control" placeholder = "代码/名称/拼音">
+							<span class = "input-group-btn">
+								<button class = "btn btn-primary" type = "button">查询</button>
+							</span>
+						</div>
+					</form>
+				</div>
+				
+				<!--不同金融地区选择面板-->
+				<div class = "financeTab">
+					<ul class = "index-list">
+						<li id = "0" class = "selected">
+							<a href = "javascript:void(0);">上证</a>
+						</li>
+						<li id = "1">
+							<a href = "javascript:void(0);">恒指</a>
+						</li>
+						<li id = "2">
+							<a href = "javascript:void(0);">道指</a>
+						</li>
+						<li id = "3">
+							<a href = "javascript:void(0);">腾安</a>
+						</li>
+					</ul>
+				</div>
+				<!--不同金融地区指数情况-->
+				<div class = "financeContent">
+					<div id = "stk0">
+						<div class = "imgArea-stk">
+							<a href = "javascript:void(0);">
+								<img class="lazy" data-original="images/content/Shanghai.png"  width="130" height="75" alt = "" src="">
+							</a>
+						</div>
+						<div class = "txtArea-stk">
+							<dl>
+								<dt class = "stkName">
+									<a href = "javascript:void(0);">上证指数</a>
+								</dt>
+								<dd class = "stkPrice">4576.49</dd>
+								<dd class = "stkChange">+98.13 &nbsp;&nbsp; +2.19%</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!--登录自选股-->
+				<div class = "user-stk">
+					<a href = "javascript:void(0);">[登录自选股]</a>
+					<a href = "javascript:void(0);">查看股票走势</a>
+				</div>
+			</div>
+
+			<!--星座运势-->
+			<div id = "todayLuck">
+				<h2>
+					<a href = "javascript:void(0);">星座运势</a>
+				</h2>
+				
+				<div id = "luck" class = "btn-group">
+					<button id = "luckTtl" type = "button" class = "btn btn-info">白羊座(03.21-04.19)</button>
+					<button type = "button" class = "btn btn-info dropdown-toggle" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false">
+						<span class = "caret"></span>
+						<span class = "sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class = "dropdown-menu">
+						<li value = "0">
+							<a class = "btn btn-default" href = "javascript:void(0);">白羊座(03.21-04.19)</a>
+						</li>
+						<li value = "1">
+							<a class = "btn btn-default" href = "javascript:void(0);">金牛座(04.20-05.20)</a>
+						</li>
+						<li value = "2">
+							<a class = "btn btn-default" href = "javascript:void(0);">双子座(05.21-06.21)</a>
+						</li>
+						<li value = "3">
+							<a class = "btn btn-default" href = "javascript:void(0);">巨蟹座(06.22-07.22)</a>
+						</li>
+						<li value = "4">
+							<a class = "btn btn-default" href = "javascript:void(0);">狮子座(07.23-08.22)</a>
+						</li>
+						<li value = "5">
+							<a class = "btn btn-default" href = "javascript:void(0);">处女座(08.23-09.22)</a>
+						</li>
+						<li value = "6">
+							<a class = "btn btn-default" href = "javascript:void(0);">天秤座(09.23-10.23)</a>
+						</li>
+						<li value = "7">
+							<a class = "btn btn-default" href = "javascript:void(0);">天蝎座(10.24-11.22)</a>
+						</li>
+						<li value = "8">
+							<a class = "btn btn-default" href = "javascript:void(0);">射手座(11.23-12.21)</a>
+						</li>
+						<li value = "9">
+							<a class = "btn btn-default" href = "javascript:void(0);">摩羯座(12.22-01.19)</a>
+						</li>
+						<li value = "10">
+							<a class = "btn btn-default " href = "javascript:void(0);">水瓶座(01.20-02.18)</a>
+						</li>
+						<li value = "11">
+							<a class = "btn btn-default " href = "javascript:void(0);">双鱼座(02.19-03.20)</a>
+						</li>
+					</ul>
+				</div>
+				<div id = "luckCont">
+					<div>
+						<div class = "luckBox">
+							<span>今日运势：</span>
+							<div class = "progress progress-striped active">
+								<div class = "progress-bar progress-bar-warning" role = "progressbar" aria-valuenow = "60" aria-valuemin = "0" aria-valuemax = "100" style = "width: 40%;">
+									<span class = "sr-only">40%警告</span>
+								</div>
+							</div>
+							<div class = "luckDetail">
+								<p>今天是脾气不佳的日子，尤其是在人际互动上，容易因为一言不合出现争执，或是开始生闷气哦！尤其...
+									<a href = "javascript:void(0);">[详细]</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--todayLuck-->
+		</div>
+	</div>
+	<!--中1广告-->
+	<div class = "row adMid1">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 adMid_left">
+			<embed src = "images/4Ads/1AdL.swf" wmode = "transparent" width = "666" height = "90" type = "application/x-shockwave-flash" >
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 adMid_right">
+			<img class="lazy" data-original="images/4Ads/1AdR.png" width="280" height="90" alt = "" src="">
+		</div>
+	</div>
+	<!--中内容-->
+	<div class = "row">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<div class = "midContent1">
+				<div class = "contentBox" id = "financial">
+					<h2>
+						<a href = "javascript:void(0);">财经</a>
+						<span class = "divi">/</span>
+						<a href = "javascript:void(0);">证券</a>
+						<span class = "divi">/</span>
+						<a href = "javascript:void(0);">理财</a>
+					</h2>
+					<div class = "imgTtl">
+						<div class = "imgArea">
+							<a href = "javascript:void(0);">
+								<img alt = "" src = "">
+							</a>
+						</div>
+						<div class = "txtArea">
+							<a href = "javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+					<div class = "txt">
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4" style = "width:320px; margin-left:10px;">
+			<div class = "midContent2">
+				<div class = "contentBox" id = "car">
+					<h2>
+						<a href = "javascript:void(0);">汽车</a>
+					</h2>
+					<div class = "imgTtl">
+						<div class = "imgArea">
+							<a href = "javascript:void(0);">
+								<img alt = "" src = "">
+							</a>
+						</div>
+						<div class = "txtArea">
+							<a href = "javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<div class = "midContent3">
+				<div class = "contentBox" id="pe">
+					<h2>
+						<a href = "javascript:void(0);">体育</a>
+						<span class = "divi">/</span>
+						<a href = "javascript:void(0);">NBA</a>
+						<span class = "divi">/</span>
+						<a href = "javascript:void(0);">NBA赛程</a>
+						<span class = "divi">/</span>
+						<a href = "javascript:void(0);">中超</a>
+					</h2>
+					<div class = "imgTtl">
+						<div class = "imgArea">
+							<a href = "javascript:void(0);">
+								<img alt = "" src = "">
+							</a>
+						</div>
+						<div class = "txtArea">
+							<a href = "javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+					<div class = "txt"></div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4" style = "width:320px; margin-left:10px;">
+			<div class = "midContent4">
+				<div class = "contentBox" id="house">
+					<h2>
+						<a href = "javascript:void(0);">深圳房产</a>
+						<span class = "divi">/</span>
+						<a href = "javascript:void(0);">腾讯看房</a>
+					</h2>
+					<div class = "imgTtl">
+						<div class = "imgArea">
+							<a href = "javascript:void(0);">
+								<img alt = "" src = "">
+							</a>
+						</div>
+						<div class = "txtArea">
+							<a href = "javascript:void(0);" ><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--中2广告-->
+	<div class = "row adMid2">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 adMid_left">
+			<img class="lazy" data-original="images/4Ads/2AdL.png" width="661" height="90" alt = "" src="">
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 adMid_right">
+			<img class="lazy" data-original="images/4Ads/2AdR.png" width="320" height="90" alt = "" src="">
+		</div>
+	</div>
+	<!--中一内容-->
+	<div class = "row">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<div class = "midContent11">
+				<div class="contentBox" id="amusement">
+					<h2>
+						<a href="javascript:void(0);">娱乐</a> <span class="divi">/</span> <a href="javascript:void(0);">明星</a>
+						<span class="divi">/</span> <a href="javascript:void(0);">电影</a><span class="divi">/</span>
+						<a href="javascript:void(0);">音乐</a>
+					</h2>
+					
+					<div class="imgTtl">
+						
+						<div class="imgArea">
+							<a href="javascript:void(0);">
+								<img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						
+						<ul></ul>
+						
+					</div>
+					
+					<div class="txt">
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4" style = "width:320px; margin-left:10px;">
+			<div class = "midContent12">
+				<div class="contentBox" id="books">
+					<h2>
+						<a href="javascript:void(0);">读书</a> <span class="divi">/</span> <a href="javascript:void(0);">图书</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div style="text-align: center;margin-bottom: 3px;"></div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<div class = "midContent13">
+				<div class="contentBox" id="it">
+					<h2>
+						<a href="javascript:void(0);">科技</a> <span class="divi">/</span> <a href="javascript:void(0);">数码</a>
+						<span class="divi">/</span> <a href="javascript:void(0);">独家外媒</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt=" " src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4" style = "width:320px; margin-left:10px;">
+			<div class = "midContent14">
+				<div class="contentBox" id="culture">
+					<h2>
+						<a href="javascript:void(0);">文化</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);" ><strong></strong></a>
+						</div>
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--中3广告-->
+	<div class = "row adMid3">
+		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 adMid_left">
+			<img class="lazy" data-original="images/4Ads/3AdL.png" width="660" height="90" alt = "" src="">
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 adMid_right">
+			<img class="lazy" data-original="images/4Ads/3AdR.png" width="320" height="90" alt = "" src="">
+		</div>
+	</div>
+	<!--中二内容-->
+	<div class = "row">
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent31" id="fashion">
+				<div class="contentBox">
+					<h2>
+						<a href="javascript:void(0);">时尚</a> <span class="divi">/</span> <a href="javascript:void(0);">美容</a>
+						<span class="divi">/</span> <a href="javascript:void(0);">健康</a>
+					</h2>
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent32">
+				<div class="contentBox" id="people">
+					<h2>
+						<a href="javascript:void(0);">大家</a>
+					</h2>
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent33">
+				<div class="contentBox" id="constellation">
+					<h2>
+						<a href="javascript:void(0);">星座</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent34">
+				<div class="contentBox" id="education">
+					<h2>
+						<a href="javascript:void(0);">教育</a> <span class="divi">/</span> <a href="javascript:void(0);">出国</a>
+						<span class="divi">/</span> <a href="javascript:void(0);">精品课</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent35">
+				<div class="contentBox" id="children">
+					<h2>
+						<a href="javascript:void(0);">儿童</a> <span class="divi">/</span> <a href="javascript:void(0);">育儿</a>
+						<span class="divi">/</span> <a href="javascript:void(0);">创造力大赛</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div style="text-align: center;margin-bottom: 7px;"></div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent36">
+				<img class="lazy" data-original="images/4Ads/mid2Ad.png" width="320" height="285" alt = "" src="">
+				<!--<img src="images/4Ads/mid2Ad.png" alt="mid2Ad"/>-->
+			</div>
+		</div>
+	</div>
+	<!--中三内容-->
+	<div class = "row">
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent41">
+				<div class="contentBox" id="war">
+					<h2>
+						<a href="javascript:void(0);">军事</a> <span class="divi">/</span> <a href="javascript:void(0);">历史</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent42">
+				<div class="contentBox" id="acg">
+					<h2>
+						<a href="javascript:void(0);">游戏</a> <span class="divi">/</span> <a href="javascript:void(0);">动漫</a>
+					</h2>
+					
+					<div class="imgTtl" style="float: left;">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent43">
+				<div class="contentBox" id="order">
+					<h2>
+						<a href="javascript:void(0);">订阅</a>
+					</h2>
+					
+					<div class="imgTtl" style="float: left;">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent44">
+				<div class="contentBox" id="social">
+					<h2>
+						<a href="javascript:void(0);">社会</a>
+					</h2>
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent45">
+				<div class="contentBox" id="religion">
+					<h2>
+						<a href="javascript:void(0);">儒学</a> <span class="divi">/</span> <a href="javascript:void(0);">佛学</a>
+						<span class="divi">/</span> <a href="javascript:void(0);">道学</a>
+					</h2>
+					
+					<div class="imgTtl" style="float: left;">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent46">
+				<img class="lazy" data-original="images/4Ads/mid3Ad.png" width="320" height="285" alt = "" src="">
+				<!--<img src="images/4Ads/mid3Ad.png" alt="mid3Ad"/>-->
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent47">
+				<div class="contentBox" id="food">
+					<h2>
+						<a href="javascript:void(0);">广东</a> <span class="divi">·</span> <a href="javascript:void(0);">美食</a>
+					</h2>
+					
+					<div class="imgTtl">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);"><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent48">
+				<div class="contentBox" id="life">
+					<h2>
+						<a href="javascript:void(0);">广东</a> <span class="divi">·</span> <a href="javascript:void(0);">生活</a>
+					</h2>
+					
+					<div class="imgTtl" style="float: left;">
+						<div class="imgArea">
+							<a href="javascript:void(0);"> <img alt="" src=""></a>
+						</div>
+						<div class="txtArea">
+							<a href="javascript:void(0);" ><strong></strong></a>
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class = "midContent49">
+				<div class="contentBox" id="tx">
+					<h2>
+						<a href="javascript:void(0);">腾讯动态</a>
+					</h2>
+					<div class="imgTtl">
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--底部横幅广告-->
+	<div class = "row">
+		<img class="lazy" data-original="images/4Ads/bottomAd.png"  width="1000" height="90" alt = "" src="">
+	</div>
+	<!--底部-->
+	<footer id = "footer"></footer>
+	<!--网页跟踪浮动窗-->
+	<div class = "modal" id = "sideQRCode" style = "display: block;">
+		<div class = "modal-dialog">
+			<div class = "modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close">
+						<span aria-hidden = "true">&times;</span>
+					</button>
+				</div>
+				<div class = "modal-body">
+						<img class="lazy" data-original="images/QPng/QRcode.png" width="80" height="80" alt = "" src="">
+				
+					<p>
+						<a href = "javascript:void(0);">下载腾讯管家</a>
+					</p>
+					
+					<p>
+						<a href = "javascript:void(0);">QQ等级双倍加速</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Bootstrap 滚动监听（Scrollspy）插件-->
+<nav id = "floatNav" class = "navbar navbar-link navbar-fixed-bottom navbar-default" role = "navigation">
+	<div id = "myScrollspy">
+		<ul class = "nav nav-tabs" data-spy = "affix" data-offset-top = "500">
+			<li>
+				<a href = "#header" onclick='this.href="../#header"'>回到顶部</a>
+			</li>
+			<li>
+				<a href = "#today1" onclick='this.href="../#today1"'>热播影视</a>
+			</li>
+			<li>
+				<a href = "#financial" onclick='this.href="../#financial"'>财经体育</a>
+			</li>
+			<li>
+				<a href = "#amusement" onclick='this.href="../#amusement"'>科技娱乐</a>
+			</li>
+			<li style = "margin:0 3px;">
+				<button class = "btn btn-info btn-sm" style = "border-radius:0;border-top:3px solid #0873c0;" data-toggle = "collapse" data-target = "#navbar-bot-collapse" type = "button">Copyright &copy; 1998 - 2015 Tencent. All Rights Reserved</button>
+			</li>
+			<li>
+				<a href = "#fashion" onclick='this.href="../#fashion"'>时尚健康</a>
+			</li>
+			<li>
+				<a href = "#education" onclick='this.href="../#education"'>教育出国</a>
+			</li>
+			<li>
+				<a href = "#war" onclick='this.href="../#war"'>军事社会</a>
+			</li>
+			<li>
+				<a href = "#footer" onclick='this.href="../#footer"'>下到底部</a>
+			</li>
+		</ul>
+	</div>
+	<div class = "collapse" id = "navbar-bot-collapse" style = "margin:40px auto 0; text-align:center;">
+		<ul class = "nav navbar-nav bg-info" style = "margin:10px 0 0 0;">
+			<li>
+				<a href = "javascript:void(0);">关于腾讯</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">About Tencent</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">服务协议</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">隐私政策</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">开放平台</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">广告服务</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">商务洽谈</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">腾讯招聘</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">腾讯公益</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">客服中心</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">网站导航</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">版权所有</a>
+			</li>
+		</ul>
+		<ul class = "nav navbar-nav bg-warning">
+			<li>
+				<a href = "javascript:void(0);">有害短信息举报</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">抵制违法广告承诺书</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">阳光·绿色网络工程</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">版权保护投诉指引</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">网络法制和道德教育基地</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">广东省通管局</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">新闻信息服务许可证</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">互联网出版许可证</a>
+			</li>
+		</ul>
+		<ul class = "nav navbar-nav bg-success">
+			<li>
+				<a href = "javascript:void(0);">粤府新函[2001]87号</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">粤网文[2014]0633-233号</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">网络视听许可证1904073号</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">增值电信业务经营许可证：</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">粤B2-20090059</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">B2-20090028</a>
+			</li>
+			<li>
+				<a href = "javascript:void(0);">违法和不良信息举报电话：0755-83767606</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+s
+<script src = "jsRequire/libs/jquery-2.2.4.min.js"></script>
+<script src = "jsRequire/libs/bootstrap-3.3.7.js"></script>
+<!--针对图片懒加载-->
+<script src = "jsRequire/libs/jquery.lazyload.1.9.7.js"></script>
+<script src = "js2Mult/index.js"></script>
+<script>
+	function onloadJs() {
+		var ele=document.createElement("script");
+		/*JSON模板引擎*/
+		ele.src="jsRequire/libs/template.js";
+		document.body.appendChild(ele);
+		var ele1=document.createElement("script");
+		ele1.src="js2Mult/ajax.js";
+		document.body.appendChild(ele1);
+	}
+	if(window.addEventListener){
+		window.addEventListener("load",onloadJs,false);
+	}else if(window.attachEvent){
+		window.attachEvent("onload",onloadJs);
+	}else{
+		window.onload=onloadJs;
+	}
+</script>
+
+<!--DEST-->
+<!--<script src = "js/libs/jquery-2.2.4.min.js"></script>
+<script src = "js/bootstrap.min.js"></script>
+<script>
+	function onloadJs() {
+		var ele=document.createElement("script");
+		ele.src="js/lazyIndexAjax.min.js";
+		document.body.appendChild(ele);
+	}
+	if(window.addEventListener){
+		window.addEventListener("load",onloadJs,false);
+	}else if(window.attachEvent){
+		window.attachEvent("onload",onloadJs);
+	}else{
+		window.onload=onloadJs;
+	}
+</script>-->
+
+</body>
+</html>

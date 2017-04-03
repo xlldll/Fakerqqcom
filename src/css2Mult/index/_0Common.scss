@@ -1,0 +1,26 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+body {
+	font-family: 宋体, "Arial Narrow", HELVETICA;
+}
+/*链接标题前缀小图标*/
+.qvp {
+/*	@include bg($imgUrl: 'QPng/videoNews.png', $h: left);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-99px);
+	padding: 0 0 0 18px;
+}
+
+.qlp {
+	/*@include bg($imgUrl: 'QPng/livePlay.png', $h: left);*/
+	@include bg($imgUrl: 'FirstPage.png', $h:0,$v:-113px);
+	padding: 0 0 0 30px;
+}
+
+.qpp {
+	/*@include bg($imgUrl: 'QPng/picNews.png', $h: left);*/
+	@include bg($imgUrl: 'FirstPage.png', $h:0,$v:-140px);
+	padding: 0 0 0 18px;
+}

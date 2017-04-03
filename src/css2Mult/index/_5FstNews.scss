@@ -1,0 +1,92 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+
+/*要闻\广东新闻标签样式*/
+/*天气*/
+#weatherLayout {
+	float: right;
+	width: 84px;
+	height: 16px;
+	margin: 15px 10px 0 0;
+	font-size: 12px;
+	line-height: 18px;
+	span {
+		width: 28px;
+		float: left;
+		margin: 0 1px;
+		color: #666;
+	}
+
+	img {
+		float: left;
+		width: 16px;
+		height: 16px;
+
+		outline:none;
+		border:0;
+	}
+}
+
+/*加载更多新闻*/
+#loadMore {
+	margin: 5px 0;
+	background-color: #f5f8fc;
+	color: #6186b5;
+	border: 1px solid #eaf1fa;
+	line-height: 12px;
+	&:hover {
+		background-color: #f0f5fc;
+		color: #4c6ea3;
+		border-color: #e1eaf7;
+	}
+}
+
+
+/*要闻内容标签栏*/
+
+/*内容一*/
+#content1 {
+	@include content();
+}
+
+/*内容二*/
+#content2 {
+	@include content($imgT: true);
+}
+
+/*内容三*/
+#content3 {
+	position:absolute;
+	@include content($imgT: true);
+}
+
+/*抗战70周年*/
+#kangzhan70 {
+	@include content();
+	
+	position:relative;
+	top:285px;
+	background-color:#fff;
+	
+	.kangzhan70logo {
+		width: 331px;
+		height: 28px;
+		@include bg($imgUrl: 'content/kangzhan70.png', $h: left);
+	}
+}
+
+/*广东新闻标签栏*/
+#gdnews {
+	@include content();
+}
+
+#gdnews1 {
+	@include content($imgT: true);
+}
+
+#gdnews2 {
+	@include content($imgT: true);
+}

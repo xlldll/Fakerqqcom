@@ -1,0 +1,81 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*广告轮播*/
+/*轮播（Carousel）侧导航*/
+#myCarousel {
+	height: 290px;
+	background: #fff;
+	font-size: 12px;
+	@extend %panel;
+}
+
+/*轮播内容浮现左右控制*/
+.carousel-control {
+	opacity: 0.1;
+	height: 65%;
+}
+
+/*轮播指示器*/
+.carousel-indicators {
+	bottom: -6px;
+	li {
+		border: 1px solid #666;
+	}
+	.active {
+		background-color: #666;
+	}
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+	width: 15px;
+}
+
+/*广告内容*/
+.item {
+	img {
+		margin: 0 auto;
+	}
+	/*简介*/
+	ul {
+		position: absolute;
+		top: 189px;
+		right: 6px;
+		width: 100%;
+		
+		padding: 5px 0 0 20px;
+		background: rgba(255, 255, 255, 0.8);
+		
+		.jdAdName {
+			text-align: center;
+			width: 250px;
+			height: 32px;
+			word-break: normal;
+			overflow: hidden;
+		}
+		
+		.jdAdCred {
+			color:#6a77b6;
+			line-height: 24px;
+			font-size: 14px;
+			font-weight: 700;
+			span {
+				float: left;
+				padding: 6px 2px;
+				margin: 0 2px;
+				line-height: 12px;
+				font-weight: 400;
+			}
+			> span:last-child{
+				color:#fff;
+				background:#e4393c;
+			}
+			.jdAdLeft span {
+				font-weight: 700;
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+/*页头*/
+
+#header{
+	margin-top: 0;
+	#festival {
+		/*@include bg($imgUrl: '1header/dragonBoatF_logo.png');*/
+		width: 150px;
+		height: 115px;
+		z-index: 11;
+	}
+}
+
+
+#logo {
+	@include bg($imgUrl: '1header/tencentWeb_logo.png');
+	width: 132px;
+	height: 43px;
+	
+	text-indent: -9999px;
+}
+
+#sogo {
+	/*要自定义缩小放大的不适合CSSsprite*/
+	@include bg($imgUrl: '1header/sogouSearch_logo.png', $sz: contain);
+	/*@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:0, $sz: contain);*/
+}
+
+#microBlog, #qqZone, #qqMail, #qqRss {
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	
+	text-indent: -9999px;
+}
+
+#qqRss {
+	/*	@include bg($imgUrl: '1header/qqRss_nav.png', $sz: contain);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:0);
+}
+
+#microBlog {
+	/*@include bg($imgUrl: '1header/microBlog_nav.png', $sz: contain);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-25px);
+	/*鼠标经过登录图标高亮*/
+	/*@include bg($imgUrl: '1header/login_ico.png', $h:0,$v:-53px,$sz: auto);
+	&:hover{
+		@include bg($imgUrl: '1header/login_ico.png', $h:-70px,$v:-53px,$sz: auto);
+	}*/
+}
+
+#qqZone {
+	/*@include bg($imgUrl: '1header/qqZone_nav.png', $sz: contain);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-50px);
+	
+}
+
+#qqMail {
+	/*@include bg($imgUrl: '1header/qqMail_nav.png', $sz: contain);*/
+	@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:-75px);
+}
+
+

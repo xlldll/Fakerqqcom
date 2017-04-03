@@ -1,0 +1,87 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*导航*/
+#navBar {
+	margin-top: 0;
+	padding-top:10px;
+	
+	/*repeat背景不适合CssSprite*/
+	@include bg($imgUrl: '3HeaderNav/navBar_02.gif',$h:0,$v:0,$rep: repeat-x);
+	height: 65px;
+	ul {
+		position: relative;
+		li {
+			float: left;
+			width: 146px;
+			height: 25px;
+			padding-left:5px;
+			border-left: 1px solid transparent;
+			border-image: url(../images/3HeaderNav/navBar_05.png) 0 3 stretch;
+			text-align: left;
+			a {
+				padding: 3px;
+				margin: 0 4px 0 3px;
+				
+				@extend %fontFamArialNar;
+				
+				&:link, &:visited {
+					color: $textClr;
+				/*	color: black;*/
+				}
+				&:hover, &:active {
+					color: $hoverClr;
+					background-color: $textBackClr;
+					text-decoration: none;
+				}
+			}
+		}
+		
+		/*更多导航*/
+		.navMoreLayout {
+			
+			position: relative;
+			left: 927px;
+			top: -26.5px;
+			
+			display: inline-block;
+			width: 50px;
+			
+			z-index: 1025;
+			#navMore {
+				width: 50px;
+				color: $textClr;
+				background: #3d95d5;
+				span {
+					display: block;
+					width: 45px;
+					padding: 2px 1px 5px 3px;
+					margin: 0 3px 0 4px;
+					@extend %fontFamArialNar;
+					/*绝对定位背景不适合CssSprite*/
+					@include bg($imgUrl: '3HeaderNav/arrowDown.png',$h:32px,$v:10px, $clr: #3d95d5);
+					
+					&:link, &:visited {
+						color: $textClr;
+					}
+					&:hover, &:active {
+						color: $hoverClr;
+						background-color: $textBackClr;
+						text-decoration: none;
+					}
+				}
+				#ulMore {
+					display: none;
+					width: 45px;
+					height: 180px;
+					li {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
+

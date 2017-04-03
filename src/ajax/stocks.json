@@ -1,0 +1,30 @@
+{
+	"stk0": {
+		"name": "腾安指数",
+		"src": "images/content/Tengan.png",
+		"href": "javascript:void(0);",
+		"price": "4576.49",
+		"change": "+98.13  +2.19%"
+	},
+	"stk1": {
+		"name": "恒指指数",
+		"src": "images/content/Hongkong.png",
+		"href": "javascript:void(0);",
+		"price": "8564.69",
+		"change": "+64.13  +2.19%"
+	},
+	"stk2": {
+		"name": "上证指数",
+		"src": "images/content/Shanghai.png",
+		"href": "javascript:void(0);",
+		"price": "6911.45",
+		"change": "+49.13  +2.19%"
+	},
+	"stk3": {
+		"name": "道指指数",
+		"src": "images/content/Tengan.png",
+		"href": "javascript:void(0);",
+		"price": "12455",
+		"change": "+3.13  +2.19%"
+	}
+}

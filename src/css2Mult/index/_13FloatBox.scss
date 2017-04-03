@@ -1,0 +1,17 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*QRcode网页弹窗*/
+#sideQRCode {
+	position: absolute;
+	left: 100%;
+	top: 210px;
+	width: 140px;
+	height: 200px;
+	
+	overflow: hidden;
+}
+
+

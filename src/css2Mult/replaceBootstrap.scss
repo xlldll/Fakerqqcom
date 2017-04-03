@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import "mymixin";
+@import "myvariable";
+
+/*1000Px固定式布局*/
+.container {
+	width: 1000px !important;
+	position: relative;
+	
+}
+.row {
+	width: 1000px;
+	margin-top: 20px;
+}
+
+/*默认的padding15px通通覆盖*/
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+$font-family-sans-serif: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*Navs组件样式覆盖*/
+.nav-tabs {
+	border-top: 1px solid $tabBorderTop;
+	border-bottom: none;
+	li {
+		outline: none;
+	}
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	border-width: 3px 0 0 0;
+	border-color: #4fa4e1;
+	border-radius: 0;
+	color: #0873c0;
+	font-weight: 700;
+	outline: none;
+}
+/*底部固定导航*/
+.navbar-nav {
+	float: none;
+	text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-size: 12px;
+	line-height: 12px;
+	padding: 10px 5px;
+	color: #666;
+	@extend %fontFamArialNar;
+}
+
+/*table-striped-首栏右侧_产品指引*/
+.table-striped > tbody > tr:nth-child(2n+1) > td,
+.table-striped > tbody > tr:nth-child(2n+1) > th {
+	background-color: #f5f8fc;
+}
+
+
+/*搜狗搜索框*/
+#header {
+	.input-group .form-control {
+		float: right;
+		height: 34px;
+		padding: 2px 5px;
+		font-size: 13px;
+		line-height: 13px;
+	}
+}
+
+/*股市搜索框*/
+.pnlTtl {
+	.input-group .form-control {
+		float: right;
+		height: 30px;
+		padding: 2px 5px;
+		font-size: 13px;
+		line-height: 13px;
+	}
+}
+
+/*搜狗搜索框——下拉列表*/
+.dropdown-menu {
+	margin: 0;
+}
+
+/*_type.scss*/
+p {
+	margin: 0;
+}
+
+/*运气面板*/
+#luck{
+	.dropdown-menu{
+		padding: 0;
+		border:none;
+		box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.175);
+	}
+}
+
+/*跟踪弹窗*/
+/*QRcode网页模态框设置*/
+.modal-content{
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+	width: 110px;
+	.modal-header {
+		padding: 5px 5px 0 0;
+		border: none;
+		
+	}
+	.modal-body {
+		padding: 5px 0 0 0;
+		@extend %fontFamArialNar;
+		font-size: 13px;
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+
+.modal-open {
+	overflow: scroll;
+}
+

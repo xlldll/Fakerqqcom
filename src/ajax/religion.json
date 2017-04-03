@@ -1,0 +1,79 @@
+{
+	"image_text": {
+		"src": "images/content/religion.jpg",
+		"alt": "在网络上轻率发言也会遭可怕的果报",
+		"href": "javascript:void(0);"
+	},
+	"news": [
+		[
+			{
+				"title": "儒学",
+				"href": "javascript:void(0);",
+				"clas": ""
+			},
+			{
+				"title": "饮食之礼：鸿门宴坐次为什么那么排？",
+				"href": "javascript:void(0);",
+				"clas": "qpp"
+			}
+		],
+		[
+			{
+				"title": "典礼仪式应保持其神圣性",
+				"href": "javascript:void(0);",
+				"clas": "pvp"
+			},
+			{
+				"title": "陶渊明到底够不够达观",
+				"href": "javascript:void(0);",
+				"clas": "pvp"
+			}
+		],
+		[
+			{
+				"title": "佛学",
+				"href": "javascript:void(0);",
+				"clas": ""
+			},
+			{
+				"title": "人都是轮回的上瘾者",
+				"href": "javascript:void(0);",
+				"clas": "qpp"
+			},
+			{
+				"title": "西游记蕴含修行之道",
+				"href": "javascript:void(0);",
+				"clas": ""
+			}
+		],
+		[
+			{
+				"title": "净雄法师募资两亿收回五千件文物",
+				"href": "javascript:void(0);",
+				"clas": ""
+			},
+			{
+				"title": "电话里能皈依吗",
+				"href": "javascript:void(0);",
+				"clas": ""
+			}
+		],
+		[
+			{
+				"title": "道学",
+				"href": "javascript:void(0);",
+				"clas": ""
+			},
+			{
+				"title": "孙悟空翻跟头速度是旅行者1号6倍",
+				"href": "javascript:void(0);",
+				"clas": "qpp"
+			}
+		],
+		{
+			"title": "这是韩国人的帽子吗？ 为“太阳巾”正名",
+			"href": "javascript:void(0);",
+			"clas": "qpp"
+		}
+	]
+}

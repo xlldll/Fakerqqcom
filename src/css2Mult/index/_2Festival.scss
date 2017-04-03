@@ -1,0 +1,18 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*节日横幅*/
+#banner {
+	width: 1000px;
+	height:164px;
+	margin-top:-46px;
+	div{
+		margin-top: -46px;
+		z-index: 10;
+	}
+	/*
+	@include bg($imgUrl: '2Festival/dargonBoat_banner.png', $h: left, $sz: contain);
+	*/
+}

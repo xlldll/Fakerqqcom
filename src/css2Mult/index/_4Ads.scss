@@ -1,0 +1,65 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*导航推荐广告*/
+#navAd {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	.navAd_left {
+		text-align: left;
+	}
+	.navAd_right {
+		text-align: right;
+		/*@include bg($imgUrl: '4Ads/0navAdR.png', $h: right);*/
+	}
+}
+
+/*中1广告*/
+.adMid1 {
+	margin-top: 15px;
+	.adMid_left {
+		height: 90px;
+	}
+	.adMid_right {
+		/*@include bg($imgUrl: '4Ads/1AdR.png', $h: 10px);*/
+		text-align: right;
+	}
+}
+
+/*中2广告*/
+.adMid2 {
+	margin-top: 15px;
+	.adMid_left {
+		/*height: 90px;*/
+		/*@include bg($imgUrl: '4Ads/2AdL.png', $h: left);*/
+		
+		/*text-indent: -9999px;*/
+	}
+	.adMid_right {
+		/*height: 90px;
+		@include bg($imgUrl: '4Ads/2AdR.png', $h: 10px);
+		
+		text-indent: -9999px;*/
+	}
+}
+
+/*中3广告*/
+.adMid3 {
+	margin-top: 15px;
+	.adMid_left {
+		/*height: 90px;
+		@include bg($imgUrl: '4Ads/3AdL.png', $h: left);
+		
+		text-indent: -9999px;*/
+	}
+	.adMid_right {
+		/*height: 90px;
+		@include bg($imgUrl: '4Ads/3AdR.png', $h: 10px);
+		
+		text-indent: -9999px;*/
+	}
+	
+}
+

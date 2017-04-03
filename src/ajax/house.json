@@ -1,0 +1,51 @@
+{
+	"image_text": {
+		"src": "images/content/house.jpg",
+		"alt": "上周深圳二手房成交均价为3.3万元/平 环比降5%",
+		"href": "javascript:void(0);"
+	},
+	"news": [
+		{
+			"title": "上半年北上广深房价普涨现日光盘 三四线难反弹",
+			"href": "javascript:void(0);"
+		},
+		{
+			"title": "佳兆业被锁楼盘发入伙通知书 业主称相信郭英成",
+			"href": "javascript:void(0);"
+		},
+		{
+			"title": "投资客转战原特区内 罗湖投资置业比例近四成",
+			"href": "javascript:void(0);"
+		},
+		[
+			{
+				"title": "独家",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "房企为业主造“神器” O2O带来新盈利点",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "楼市",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "深旧改盘入市500万资产认证买房资格",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "样开",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "罗岗6.27开放样板 公立小学初中进驻",
+				"href": "javascript:void(0);"
+			}
+		]
+	]
+}

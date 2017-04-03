@@ -1,0 +1,99 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*今日话题*/
+.today {
+	@extend %clearfix;
+	/*标签栏标题*/
+	.header2 {
+		height: 42px;
+		
+		border-top: 1px solid $tabBorderTop;
+		h2 {
+			margin: 10px 0 10px 5px;
+			outline: none;
+			color: #0873c0;
+			font-size: 14px;
+			font-weight: 700;
+			text-indent: 5px;
+		}
+	}
+	/*内容标题*/
+	.header3 {
+		margin: 10px 0;
+		text-align: center;
+		font-size: 20px;
+		a {
+			color: #3b639f !important;
+			font-weight: bold !important;
+		}
+		
+		a:hover {
+			color: #cd0200 !important;
+		}
+	}
+	/*内容*/
+	.todayTopic {
+		@include content();
+		.fright {
+			float: right;
+		}
+		.fleft {
+			float: left;
+		}
+		li a.cBlue {
+			color: $todayTopicRight;
+			@extend %fontFamArialNar;
+			&:hover {
+				color: $hoverClr;
+			}
+		}
+	}
+}
+
+/*今日热播*/
+.vnews, .mnews {
+	@include content();
+}
+.img-text {
+	&>div:first-child{
+		float: left;
+	}
+	&>div:last-child{
+		float: right;
+	}
+	text-align: center;
+	@extend %clearfix;
+}
+
+/*大家爱看*/
+.today2 {
+	.header2 {
+		height: 42px;
+		
+		border-top: 1px solid $tabBorderTop;
+		
+		@extend %clearfix;
+		h2 {
+			margin: 10px 0 10px 5px;
+			outline: none;
+			color: #0873c0;
+			font-size: 14px;
+			font-weight: 700;
+			text-indent: 5px;
+			
+			span{
+				float: right;
+				margin: 0 5px;
+				img{
+					outline: 0;
+				}
+			}
+		}
+	}
+	.ikan {
+		@include content($imgT: true);
+	}
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+
+
+/*运势*/
+#todayLuck {
+	@extend %panel;
+
+	h2 {
+		display: inline-block;
+		margin: 12px 0 10px 5px;
+		outline: none;
+		
+		color: #0873c0;
+		font-size: 14px;
+		font-weight: 700;
+		text-indent: 5px;
+	}
+	#luck {
+		margin: 10px auto 15px;
+		display: block;
+		width: 190px;
+		height: 35px;
+	}
+	
+	/*运气分析*/
+	.luckBox {
+		span {
+			padding: 0 0 0 8px;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.progress {
+			float: right;
+			width: 70%;
+			margin: 0 5px 10px 0;
+		}
+		.luckDetail {
+			width: 88%;
+			margin: 10px auto;
+			clear: both;
+			color: #323f5a;
+			
+		}
+	}
+}

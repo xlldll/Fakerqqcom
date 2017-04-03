@@ -1,0 +1,35 @@
+@charset "UTF-8";
+//Created by LinChuQiang.
+@import "../_mymixin";
+@import "../_myvariable";
+
+/*******************
+中间栏图文内容
+*******************/
+.contentBox {
+	height: 42px;
+	border-top: 1px solid #0873c0;
+	
+	h2 {
+		margin: 10px 0 10px 5px;
+		outline: none;
+		color: #0873c0;
+		font-size: 14px;
+		font-weight: 700;
+		text-indent: 5px;
+		
+	}
+}
+
+.imgTtl {
+	@include content($imgT: true, $ul: false);
+	float: left;
+	width: 330px;
+}
+
+.txt {
+	@include content($ul: false);
+	float: left;
+	margin-left:10px;
+	
+}

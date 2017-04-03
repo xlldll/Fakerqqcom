@@ -1,0 +1,7 @@
+{
+    "duplicate-properties":true,
+    "box-model":true,
+    "display-property-grouping":true,
+    "known-properties":true,
+    "empty-rules":true
+}
