@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head lang = "zh-CN">
-	<base href = "http://fakerqqcom:8080/src/" target = "_self" >
-	<!--<base href = "http://fakerqqcom:8080/dist/" target = "_self" >-->
 	<!--字符编码-->
 	<meta charset="UTF-8">
 	<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
@@ -11,16 +9,17 @@
 	<!--禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉-->
 	<!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">-->
 	<title>仿腾讯首页</title>
-	<link rel = "shortcut icon" href = "images/tencent.ico" >
-	<link rel = "stylesheet" href = "css2Min/normalize/normalize-5.css" >
-	<link rel = "stylesheet" href = "css2Min/bootstrap.min.css" >
-	<link rel = "stylesheet" href = "css2Mult/replaceBootstrap.css" >
-	<link rel = "stylesheet" href = "css2Mult/index.css" >
+	<link rel = "shortcut icon" href = "dist/images/tencent.ico" >
+	
+<!--	<link rel = "stylesheet" href = "src/css2Min/normalize/normalize-5.css" >
+	<link rel = "stylesheet" href = "src/css2Min/bootstrap.min.css" >
+	<link rel = "stylesheet" href = "src/css2Mult/replaceBootstrap.css" >
+	<link rel = "stylesheet" href = "src/css2Mult/index.css" >-->
 	
 	<!--DEST-->
-	<!--<link rel = "stylesheet" href = "css/normalize/normalize-5.min.css" >
-	<link rel = "stylesheet" href = "css/bootstrap.min.css" >
-	<link rel = "stylesheet" href = "css/indexRbs.min.css" >-->
+	<link rel = "stylesheet" href = "dist/css/normalize/normalize-5.min.css" >
+	<link rel = "stylesheet" href = "dist/css/bootstrap.min.css" >
+	<link rel = "stylesheet" href = "dist/css/indexRbs.min.css" >
 	
 	<!--[if lt IE 9]>
 	<script src = "http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -28,6 +27,11 @@
 	<![endif]-->
 	<!--WS监测-->
 	<script src = "http://fakerqqcom:35729/livereload.js"></script>
+	<!--路径
+	data-original="dist
+	data-src = "dist
+	src = "dist
+	-->
 </head>
 <!--通过 data 属性 实行 滚动监听（Scrollspy）插件-->
 <!--随着页面滚动实现高亮导航并关联到当前导航-->
@@ -36,7 +40,7 @@
 	<!--页头-->
 	<div id = "header" class = "row">
 		<div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2" id="festival">
-			<img class="lazy" data-original="images/1Header/dragonBoatF_logo.png" width="150" height="115" alt = "" src="">
+			<img class="lazy" data-original="dist/images/1Header/dragonBoatF_logo.png" width="150" height="115" alt = "" src="">
 		</div>
 		<div class = "col-lg-10 col-md-10 col-sm-10 col-xs-10" style = "margin-top: 25px;">
 			<div class = "col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -85,7 +89,7 @@
 	<!--节日横幅-->
 	<div class = "row" id = "banner">
 		<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<img class="lazy" data-original="images/2Festival/dargonBoat_banner.png" width="1000" height="164" alt = "" src="">
+			<img class="lazy" data-original="dist/images/2Festival/dargonBoat_banner.png" width="1000" height="164" alt = "" src="">
 		</div>
 	</div>
 	<!--导航条-->
@@ -219,10 +223,10 @@
 	<!--导航广告-->
 	<div class = "row" id = "navAd">
 		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 navAd_left">
-			<img class="lazy" data-original="images/4Ads/0navAdL.png" width="666" height="75" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/0navAdL.png" width="666" height="75" alt = "" src="">
 		</div>
 		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 navAd_right">
-			<img class="lazy" data-original="images/4Ads/0navAdR.png" width="280" height="75" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/0navAdR.png" width="280" height="75" alt = "" src="">
 		</div>
 	</div>
 	<!--首栏内容-->
@@ -243,7 +247,7 @@
 					<li id = "weatherLayout">
 						<span id = "ipWeather">深圳</span>
 						<span id = "weatherTemperature">29℃</span>
-						<img class="lazy" data-original="images/QPng/rainy1.png" width="16" height="16" alt = "" src="">
+						<img class="lazy" data-original="dist/images/QPng/rainy1.png" width="16" height="16" alt = "" src="">
 					</li>
 				</ul>
 				<!--标签内容-->
@@ -281,7 +285,7 @@
 						<div id = "content2">
 							<div class="imgArea">
 								<a href="javascript:void(0);">
-									<img class="lazy" data-original="images/content/importantNews1.jpg" width="108" height="70" alt = "" src="">
+									<img class="lazy" data-original="dist/images/content/importantNews1.jpg" width="108" height="70" alt = "" src="">
 								</a>
 							</div>
 							<div class="txtArea">
@@ -318,7 +322,7 @@
 						<div id = "content3">
 							<div class="imgArea">
 								<a href="javascript:void(0);">
-									<img class="lazy" data-original="images/content/importantNews2.jpg" width="108" height="70" alt = "" src="">
+									<img class="lazy" data-original="dist/images/content/importantNews2.jpg" width="108" height="70" alt = "" src="">
 								</a>
 							</div>
 							<div class="txtArea">
@@ -456,7 +460,7 @@
 									<div class="vnews1">
 										<div>
 											<a href="javascript:void(0);">
-												<img class="lazy" data-original="images/content/todayVideo1.jpg" width="145" height="80" alt = "" src="">
+												<img class="lazy" data-original="dist/images/content/todayVideo1.jpg" width="145" height="80" alt = "" src="">
 											</a>
 										</div>
 										<p><a href="javascript:void(0);">司机高速上边打吊瓶边开车</a></p>
@@ -464,7 +468,7 @@
 									<div class="vnews2">
 										<div >
 											<a href="javascript:void(0);">
-												<img class="lazy" data-original="images/content/todayVideo2.jpg" width="145" height="80" alt = "" src="">
+												<img class="lazy" data-original="dist/images/content/todayVideo2.jpg" width="145" height="80" alt = "" src="">
 											</a>
 										</div>
 										<p><a href="javascript:void(0);">孙红雷使诈惹哭张艺兴</a></p>
@@ -502,7 +506,7 @@
 								<div class="img-text">
 									<div class="vnews1" class="fl">
 										<div >
-											<a href="javascript:void(0);"><img src="images/content/todayMovie1.jpg" alt="《暗黑者2》8月良心回归 "></a>
+											<a href="javascript:void(0);"><img src="src/images/content/todayMovie1.jpg" alt="《暗黑者2》8月良心回归 "></a>
 										</div>
 										<p>
 											<a href="javascript:void(0);">《暗黑者2》8月良心回归 </a>
@@ -510,7 +514,7 @@
 									</div>
 									<div class="vnews2" class="fr">
 										<div>
-											<a href="javascript:void(0);"><img src="images/content/todayMovie2.jpg" alt="《爱我就陪我看电影》"></a>
+											<a href="javascript:void(0);"><img src="src/images/content/todayMovie2.jpg" alt="《爱我就陪我看电影》"></a>
 										</div>
 										<p><a href="javascript:void(0);">《爱我就陪我看电影》</a>
 										</p>
@@ -530,12 +534,12 @@
 						<a href = "javascript:void(0);">大家爱看</a>
 						<span>
 							<a href = "javascript:void(0);">
-								<img data-src = "images/QPng/more.png" src="" alt = "" >
+								<img data-src = "dist/images/QPng/more.png" src="" alt = "" >
 							</a>
 						</span>
 						<span>
 							<a href = "javascript:void(0);">
-								<img data-src = "images/QPng/refresh.png" src="" alt = "" >
+								<img data-src = "dist/images/QPng/refresh.png" src="" alt = "" >
 							</a>
 						</span>
 					</h2>
@@ -544,7 +548,7 @@
 					<div class="imgArea">
 						<span></span>
 						<a href="javascript:void(0);">
-							<img class="lazy" data-original="images/content/ikan1.jpg" width="108" height="70" alt = "" src="">
+							<img class="lazy" data-original="dist/images/content/ikan1.jpg" width="108" height="70" alt = "" src="">
 						</a>
 					</div>
 					<div class="txtArea">
@@ -604,7 +608,7 @@
 							<a href = "javascript:void(0);">软件</a>
 						</td>
 						<td>
-							<img data-src = "images/QPng/7ProductNav/proNav-love.png" alt = "" src="">
+							<img data-src = "dist/images/QPng/7ProductNav/proNav-love.png" alt = "" src="">
 						</td>
 					</tr>
 					<tr>
@@ -624,7 +628,7 @@
 							<a href = "javascript:void(0);">腾讯云</a>
 						</td>
 						<td>
-							<img data-src = "images/QPng/7ProductNav/proNav-user.png" alt = "" src="">
+							<img data-src = "dist/images/QPng/7ProductNav/proNav-user.png" alt = "" src="">
 						</td>
 					</tr>
 					<tr>
@@ -654,7 +658,7 @@
 							<a href = "javascript:void(0);">应用宝</a>
 						</td>
 						<td style = "padding: 15px 0 0 9px;">
-							<img data-src = "images/QPng/7ProductNav/proNav-phone.png" alt = "" src="">
+							<img data-src = "dist/images/QPng/7ProductNav/proNav-phone.png" alt = "" src="">
 							
 						</td>
 					</tr>
@@ -685,7 +689,7 @@
 							<a href = "javascript:void(0);">炫舞</a>
 						</td>
 						<td style = "padding: 15px 0 0 5px;">
-							<img data-src = "images/QPng/7ProductNav/proNav-game.png" alt = "" src="">
+							<img data-src = "dist/images/QPng/7ProductNav/proNav-game.png" alt = "" src="">
 						</td>
 					</tr>
 					<tr>
@@ -705,7 +709,7 @@
 							<a href = "javascript:void(0);">全部</a>
 						</td>
 						<td>
-							<img data-src = "images/QPng/7ProductNav/proNav-drink.png" alt = "" src="">
+							<img data-src = "dist/images/QPng/7ProductNav/proNav-drink.png" alt = "" src="">
 						</td>
 					</tr>
 					</tbody>
@@ -845,7 +849,7 @@
 				<div class = "carousel-inner">
 					<div class = "item">
 						<a href = "javascript:void(0);">
-							<img class="lazy" data-original="images/4Ads/jd.jpg"  width="250" height="250" alt = "" src="">
+							<img class="lazy" data-original="dist/images/4Ads/jd.jpg"  width="250" height="250" alt = "" src="">
 						</a>
 						<ul>
 							<li class = "jdAdName">【金幻】卧室灯LED吸顶灯现代简约田园温馨客厅书房餐厅阳台灯过道灯圆形灯具 木艺圆系 花藤30CM正白光12W</li>
@@ -859,7 +863,7 @@
 					</div>
 					<div class = "item">
 						<a href = "javascript:void(0);">
-							<img class="lazy" data-original="images/4Ads/jd1.jpg"  width="250" height="250" alt = "" src="">
+							<img class="lazy" data-original="dist/images/4Ads/jd1.jpg"  width="250" height="250" alt = "" src="">
 						</a>
 						<ul>
 							<li class = "jdAdName">【本韵】和田玉转运珠吊坠路路通男女款玉石项链 墨玉款</li>
@@ -873,7 +877,7 @@
 					</div>
 					<div class = "item">
 						<a href = "javascript:void(0);">
-							<img class="lazy" data-original="images/4Ads/jd4.jpg"  width="250" height="250" alt = "" src="">
+							<img class="lazy" data-original="dist/images/4Ads/jd4.jpg"  width="250" height="250" alt = "" src="">
 						</a>
 						<ul>
 							<li class = "jdAdName">美的(Midea) F40-15A1 40升 电热水器</li>
@@ -888,7 +892,7 @@
 					</div>
 					<div class = "item">
 						<a href = "javascript:void(0);">
-							<img class="lazy" data-original="images/4Ads/jd2.jpg"  width="250" height="250" alt = "" src="">
+							<img class="lazy" data-original="dist/images/4Ads/jd2.jpg"  width="250" height="250" alt = "" src="">
 						</a>
 						<ul>
 							<li class = "jdAdName">帕森（PARZIN）太阳镜男款偏光驾驶镜司机男士大框墨镜蛤蟆眼镜8009 黑框黑灰片</li>
@@ -902,7 +906,7 @@
 					</div>
 					<div class = "item active">
 						<a href = "javascript:void(0);">
-							<img class="lazy" data-original="images/4Ads/jd3.jpg"  width="250" height="250" alt = "" src="">
+							<img class="lazy" data-original="dist/images/4Ads/jd3.jpg"  width="250" height="250" alt = "" src="">
 						</a>
 						<ul>
 							<li class = "jdAdName">奥克斯（AUX）FR-F3001EZ-4 3L智能电饭煲 不锈钢外壳（紫色）</li>
@@ -965,7 +969,7 @@
 					<div id = "stk0">
 						<div class = "imgArea-stk">
 							<a href = "javascript:void(0);">
-								<img class="lazy" data-original="images/content/Shanghai.png"  width="130" height="75" alt = "" src="">
+								<img class="lazy" data-original="dist/images/content/Shanghai.png"  width="130" height="75" alt = "" src="">
 							</a>
 						</div>
 						<div class = "txtArea-stk">
@@ -1061,10 +1065,10 @@
 	<!--中1广告-->
 	<div class = "row adMid1">
 		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 adMid_left">
-			<embed src = "images/4Ads/1AdL.swf" wmode = "transparent" width = "666" height = "90" type = "application/x-shockwave-flash" >
+			<embed src = "src/images/4Ads/1AdL.swf" wmode = "transparent" width = "666" height = "90" type = "application/x-shockwave-flash" >
 		</div>
 		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 adMid_right">
-			<img class="lazy" data-original="images/4Ads/1AdR.png" width="280" height="90" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/1AdR.png" width="280" height="90" alt = "" src="">
 		</div>
 	</div>
 	<!--中内容-->
@@ -1171,10 +1175,10 @@
 	<!--中2广告-->
 	<div class = "row adMid2">
 		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 adMid_left">
-			<img class="lazy" data-original="images/4Ads/2AdL.png" width="661" height="90" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/2AdL.png" width="661" height="90" alt = "" src="">
 		</div>
 		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 adMid_right">
-			<img class="lazy" data-original="images/4Ads/2AdR.png" width="320" height="90" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/2AdR.png" width="320" height="90" alt = "" src="">
 		</div>
 	</div>
 	<!--中一内容-->
@@ -1278,10 +1282,10 @@
 	<!--中3广告-->
 	<div class = "row adMid3">
 		<div class = "col-lg-8 col-md-8 col-sm-8 col-xs-8 adMid_left">
-			<img class="lazy" data-original="images/4Ads/3AdL.png" width="660" height="90" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/3AdL.png" width="660" height="90" alt = "" src="">
 		</div>
 		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4 adMid_right">
-			<img class="lazy" data-original="images/4Ads/3AdR.png" width="320" height="90" alt = "" src="">
+			<img class="lazy" data-original="dist/images/4Ads/3AdR.png" width="320" height="90" alt = "" src="">
 		</div>
 	</div>
 	<!--中二内容-->
@@ -1381,8 +1385,7 @@
 		</div>
 		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
 			<div class = "midContent36">
-				<img class="lazy" data-original="images/4Ads/mid2Ad.png" width="320" height="285" alt = "" src="">
-				<!--<img src="images/4Ads/mid2Ad.png" alt="mid2Ad"/>-->
+				<img class="lazy" data-original="dist/images/4Ads/mid2Ad.png" width="320" height="285" alt = "" src="">
 			</div>
 		</div>
 	</div>
@@ -1487,8 +1490,7 @@
 		</div>
 		<div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
 			<div class = "midContent46">
-				<img class="lazy" data-original="images/4Ads/mid3Ad.png" width="320" height="285" alt = "" src="">
-				<!--<img src="images/4Ads/mid3Ad.png" alt="mid3Ad"/>-->
+				<img class="lazy" data-original="dist/images/4Ads/mid3Ad.png" width="320" height="285" alt = "" src="">
 			</div>
 		</div>
 	</div>
@@ -1546,7 +1548,7 @@
 	</div>
 	<!--底部横幅广告-->
 	<div class = "row">
-		<img class="lazy" data-original="images/4Ads/bottomAd.png"  width="1000" height="90" alt = "" src="">
+		<img class="lazy" data-original="dist/images/4Ads/bottomAd.png"  width="1000" height="90" alt = "" src="">
 	</div>
 	<!--底部-->
 	<footer id = "footer"></footer>
@@ -1560,7 +1562,7 @@
 					</button>
 				</div>
 				<div class = "modal-body">
-						<img class="lazy" data-original="images/QPng/QRcode.png" width="80" height="80" alt = "" src="">
+						<img class="lazy" data-original="dist/images/QPng/QRcode.png" width="80" height="80" alt = "" src="">
 				
 					<p>
 						<a href = "javascript:void(0);">下载腾讯管家</a>
@@ -1697,21 +1699,15 @@
 		</ul>
 	</div>
 </nav>
-s
-<script src = "jsRequire/libs/jquery-2.2.4.min.js"></script>
-<script src = "jsRequire/libs/bootstrap-3.3.7.js"></script>
-<!--针对图片懒加载-->
-<script src = "jsRequire/libs/jquery.lazyload.1.9.7.js"></script>
-<script src = "js2Mult/index.js"></script>
+
+<script src = "src/jsRequire/libs/jquery-2.2.4.min.js"></script>
+<script src = "dist/js/bootstrap.min.js"></script>
 <script>
 	function onloadJs() {
 		var ele=document.createElement("script");
 		/*JSON模板引擎*/
-		ele.src="jsRequire/libs/template.js";
+		ele.src="dist/js/lazyIndexAjax.min.js";
 		document.body.appendChild(ele);
-		var ele1=document.createElement("script");
-		ele1.src="js2Mult/ajax.js";
-		document.body.appendChild(ele1);
 	}
 	if(window.addEventListener){
 		window.addEventListener("load",onloadJs,false);
@@ -1721,24 +1717,6 @@ s
 		window.onload=onloadJs;
 	}
 </script>
-
-<!--DEST-->
-<!--<script src = "js/libs/jquery-2.2.4.min.js"></script>
-<script src = "js/bootstrap.min.js"></script>
-<script>
-	function onloadJs() {
-		var ele=document.createElement("script");
-		ele.src="js/lazyIndexAjax.min.js";
-		document.body.appendChild(ele);
-	}
-	if(window.addEventListener){
-		window.addEventListener("load",onloadJs,false);
-	}else if(window.attachEvent){
-		window.attachEvent("onload",onloadJs);
-	}else{
-		window.onload=onloadJs;
-	}
-</script>-->
 
 </body>
 </html>

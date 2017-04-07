@@ -1,0 +1,77 @@
+{
+	"image_text0": {
+		"src": "images/content/apple.jpg",
+		"alt": "为了“讨好”中国，苹果们也是蛮拼的",
+		"href": "javascript:void(0);"
+	},
+	"news": [
+		{
+			"title": "提速降费将另类破冰？首批民营宽带运营商诞生",
+			"href": "javascript:void(0);",
+			"clas": "qlp"
+		},
+		{
+			"title": "1吨主板含80克黄金 电子垃圾变“城市矿山”",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		},
+		{
+			"title": "中移动分公司：月底不办理实名制 公安局见",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		},
+		{
+			"title": "iOS 8.3完美越狱来了 你还要越么？",
+			"href": "javascript:void(0);",
+			"clas": "qpp"
+		},
+		{
+			"title": "iPad mini 4保护壳曝光 取消静音开关设计",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		},
+		{
+			"title": "尼康全画幅D5配置曝光 超高ISO支持4K视频",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		}
+	],
+	
+	"image_text1": {
+		"src": "images/content/earth.jpg",
+		"alt": "美国或用核弹攻击小行星 演练保护地球",
+		"href": "javascript:void(0);"
+	},
+	"news1": [
+		{
+			"title": "苹果台湾代工厂和硕暗示：iPhone 6S即将量产",
+			"href": "javascript:void(0);",
+			"clas": "qlp"
+		},
+		{
+			"title": "阿里外卖O2O遇挫 淘点点市场份额锐减六成",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		},
+		{
+			"title": "就因MERS疫情扩散 三星太子李在镕低头道歉",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		},
+		{
+			"title": "5.9mm！Galaxy A8或成三星有史以来最薄手机",
+			"href": "javascript:void(0);",
+			"clas": "qpp"
+		},
+		{
+			"title": "这5款智能手机创造过世界纪录",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		},
+		{
+			"title": "亚马逊新版Kindle Paperwhite体验",
+			"href": "javascript:void(0);",
+			"clas": "qvp"
+		}
+	]
+}

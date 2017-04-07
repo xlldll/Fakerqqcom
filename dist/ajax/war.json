@@ -1,0 +1,39 @@
+{
+	"image_text": {
+		"src": "images/content/war.jpg",
+		"alt": "美军3艘航母同时靠港塞满码头",
+		"href": "javascript:void(0);"
+	},
+	"news": [
+		{
+			"title": "组图：俄罗斯10万吨级新型航母模型曝光",
+			"href": "javascript:void(0);",
+			"clas": "qpp"
+		},
+		{
+			"title": "组图：中国队包揽军警狙击手世界杯全部冠军",
+			"href": "javascript:void(0);",
+			"clas": "qpp"
+		},
+		{
+			"title": "国产新武器参阅不为秀肌肉 部分指标或世界最强",
+			"href": "javascript:void(0);",
+			"clas": ""
+		},
+		{
+			"title": "议政王大臣会议如何变成养老挂靠之所?",
+			"href": "javascript:void(0);",
+			"clas": ""
+		},
+		{
+			"title": "“德国之欧洲”如何变成“欧洲之德国”",
+			"href": "javascript:void(0);",
+			"clas": ""
+		},
+		{
+			"title": "前苏联密档披露内战支援中共武器数量",
+			"href": "javascript:void(0);",
+			"clas": ""
+		}
+	]
+}

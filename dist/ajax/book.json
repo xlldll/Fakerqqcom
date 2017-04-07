@@ -1,0 +1,91 @@
+{
+	"books": [
+		{
+			"src": "images/content/book1.png",
+			"alt": "book1",
+			"href": "javascript:void(0);"
+		},
+		{
+			"src": "images/content/book2.png",
+			"alt": "book2",
+			"href": "javascript:void(0);"
+		},
+		{
+			"src": "images/content/book3.png",
+			"alt": "book3",
+			"href": "javascript:void(0);"
+		}
+	],
+	"news": [
+		[
+			{
+				"title": "玄幻",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "升级系统纵横异世",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "横扫寰宇八荒",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "原创",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "宿命的开始…",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "缔造大明一代盛世",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "言情",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "鬼王的绝宠尤物",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "二嫁前妻很腹黑",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "女频",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "邪王溺宠纨绔妃",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "总裁私宠小甜妻",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "励志",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "最戳心窝的奋斗史",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "给年轻人的开窍课",
+				"href": "javascript:void(0);"
+			}
+		]
+	]
+}

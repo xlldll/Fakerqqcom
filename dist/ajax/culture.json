@@ -1,0 +1,69 @@
+{
+	"image_text": {
+		"src": "images/content/shark.jpg",
+		"alt": "与鲨鱼共舞",
+		"href": "javascript:void(0);"
+	},
+	"news": [
+		[
+			{
+				"title": "独家",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "刘慈欣：《三体》的流行是偶然现象",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "历史",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "清代如何医治“高考”后遗症？",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "文学",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "刘和平：《北平无战事》一点都没有超前",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "大家",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "那些悼念纳什的人，你们真的懂NASH吗",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "资讯",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "《大宪章》保护了英国国教会？",
+				"href": "javascript:void(0);"
+			}
+		],
+		[
+			{
+				"title": "观察",
+				"href": "javascript:void(0);"
+			},
+			{
+				"title": "哈姆雷特未来面孔：莎翁参与构建当代思想",
+				"href": "javascript:void(0);"
+			}
+		]
+	]
+}

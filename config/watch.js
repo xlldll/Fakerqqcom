@@ -37,14 +37,14 @@ module.exports = {
   js2Min: {
     files: ['<%=paths.src.js2Min%>'+'/{,**/}*.{coffee,js}'],
     tasks: ['sync:js2MinSync',
-      'clean:destJsMin',
+      'clean:distJsMin',
       'newer:uglify:js2MinSync'
     ]
   },
   js2Mult: {
     files: ['<%=paths.src.js2Mult%>'+'/{,**/}*.{coffee,js}'],
     tasks: ['sync:js2MultSync',
-      'clean:destJsMult',
+      'clean:distJsMult',
       'newer:uglify:js2MultSync'
     ]
   },
