@@ -43,3 +43,5 @@
   - 任务名称的大小写
 - No newer files to process.
   - newer:cssmin 多重文件依赖不适合newer
+- img not found
+  - 注意SCSS文件内的引用名的大小写区分

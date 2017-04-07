@@ -15,7 +15,7 @@
 
 
 #logo {
-	@include bg($imgUrl: '1header/tencentWeb_logo.png');
+	@include bg($imgUrl: '1Header/tencentWeb_logo.png');
 	width: 132px;
 	height: 43px;
 	
@@ -24,7 +24,7 @@
 
 #sogo {
 	/*要自定义缩小放大的不适合CSSsprite*/
-	@include bg($imgUrl: '1header/sogouSearch_logo.png', $sz: contain);
+	@include bg($imgUrl: '1Header/sogouSearch_logo.png', $sz: contain);
 	/*@include bg($imgUrl: 'FirstPage.png', $h: 0,$v:0, $sz: contain);*/
 }
 
