@@ -13,11 +13,11 @@ $(document).ready(
 		/*头部导航条更多箭头切换*/
 		$('#navMore').hover(
 			function(){
-				$(this).find('span').css('background', 'url(dist/images/3HeaderNav/arrowUp.png) 32px 10px no-repeat');
+				$(this).find('span').css('background', 'url(images/3HeaderNav/arrowUp.png) 32px 10px no-repeat');
 				$('#ulMore').show();
 			},
 			function(){
-				$(this).find('span').css('background', 'url(dist/images/3HeaderNav/arrowDown.png) 32px 10px no-repeat');
+				$(this).find('span').css('background', 'url(images/3HeaderNav/arrowDown.png) 32px 10px no-repeat');
 				$('#ulMore').hide();
 			}
 		);

@@ -4,10 +4,6 @@
 
 (function() {
 	
-	/*路径*/
-	var imgSrc="dist/";
-	
-	
 	function href( h,t,c ) {
 		var c = c || "";
 		return '<a href ="' + h + '" class=" ' + c + ' ">' + t + '</a>';
@@ -22,9 +18,9 @@
 		}
 		var order=which?which:0;
 		var thisdata=which!==undefined?data["image_text"+which]:data.image_text;
-		var thishref = imgSrc + thisdata.href;
+		var thishref = thisdata.href;
 		var thisalt = thisdata.alt;
-		var thissrc = imgSrc + thisdata.src;
+		var thissrc = thisdata.src;
 		$( pnlID+" .imgArea" ).eq(order).find( "a" ).attr( "href",thishref ).find( "img" ).attr( { "alt" : thisalt,"src" : thissrc } );
 		$( pnlID+" .txtArea" ).eq(order).find( "a" ).attr( "href",thishref ).find( "strong" ).html( thisalt );
 	}
@@ -82,7 +78,7 @@
 	
 	/*广东新闻面板*/
 	$('#GuangDongNews-tab').on('show.bs.tab', function(){
-		$.getJSON( imgSrc+"ajax/gdnews.json" ).done( function( data ) {
+		$.getJSON( "ajax/gdnews.json" ).done( function( data ) {
 			txt(data,"#gdnews","","gdnews",8);
 			imgArea(data,"#GuangDongNews",0);
 			txt(data,"#gdnews1","","gdnews1",9);
@@ -92,8 +88,8 @@
 	});
 	/*今日热播*/
 	$('#todayMovie-tab').on('shown.bs.tab', function(){
-		$.getJSON( imgSrc+"ajax/toadyMovie.json" ).done( function( data ) {
-			$("#todayMovie .vnews1").find("div").html('<a href="'+data.movie_image_text.href+'"><img src="'+imgSrc+data.movie_image_text.src+'" alt="'+data.movie_image_text.alt+'"></a>');
+		$.getJSON( "ajax/toadyMovie.json" ).done( function( data ) {
+			$("#todayMovie .vnews1").find("div").html('<a href="'+data.movie_image_text.href+'"><img src="'+data.movie_image_text.src+'" alt="'+data.movie_image_text.alt+'"></a>');
 			txt(data,"#todayMovie",".mnews","movie_news",8);
 		} );
 	});
@@ -103,10 +99,10 @@
 		$('.index-list li').removeClass('selected');
 		$(this).addClass('selected');
 		var id=$(this).attr('id');
-		$.getJSON( imgSrc+"ajax/stocks.json" ).done( function( data ) {
+		$.getJSON( "ajax/stocks.json" ).done( function( data ) {
 			var thisdata=data["stk"+id];
-			//console.log(thisdata);
-			$('.financeContent').find('.imgArea-stk a').attr("href",thisdata.href).find('img').attr({"src":'src/'+thisdata.src,"alt":thisdata.name,"height":75,"width":130});
+			console.log(thisdata);
+			$('.financeContent').find('.imgArea-stk a').attr("href",thisdata.href).find('img').attr({"src":thisdata.src,"alt":thisdata.name,"height":75,"width":130});
 			$('.financeContent').find('.txtArea-stk').find('.stkName a').attr("href",thisdata.href).text(thisdata.name).end().find('.stkPrice').text(thisdata.price).end().find('.stkChange').text(thisdata.change);
 		} );
 	});
@@ -116,7 +112,7 @@
 		var liAtxt = $(this).find('a').text();
 		$('#luckTtl').text(liAtxt);
 		var liV = $(this).attr('value');
-		$.getJSON( imgSrc+"ajax/luck.json" ).done( function( data ) {
+		$.getJSON( "ajax/luck.json" ).done( function( data ) {
 			var thisdata=data[liV];
 			console.log(thisdata);
 			var cls=thisdata.luckNum>=80?"progress-bar-success":(thisdata.luckNum>=40?"progress-bar-warning":"progress-bar-danger");
@@ -130,10 +126,10 @@
 	 ********/
 	
 	/*金融面板加载*/
-	var financialPnl = imgSrc+"ajax/financial.json";
+	var financialPnl = "ajax/financial.json";
 	$.getJSON( financialPnl )
 	 .done( function( data ) {
-		 var image_text_src = 'src/'+data.image_text.src;
+		 var image_text_src = data.image_text.src;
 		 var image_text_alt = data.image_text.alt;
 		 var image_text_href = data.image_text.href;
 		 /*左一图文*/
@@ -186,7 +182,7 @@
 	var jqxhr = $.ajax( {
 		method     : "GET",
 		type       : "GET",
-		url        : imgSrc+"ajax/car.json",
+		url        : "ajax/car.json",
 		dataType   : "json",
 		statusCode : {
 			200 : function() {
@@ -196,7 +192,7 @@
 		}
 	} );
 	jqxhr.done( function( data ) {
-		$( "#car .imgArea" ).find( "a" ).attr( { "href" : data.image_text.href } ).find( "img" ).attr( { "alt" : data.image_text.alt,"src" : 'src/' + data.image_text.src } );
+		$( "#car .imgArea" ).find( "a" ).attr( { "href" : data.image_text.href } ).find( "img" ).attr( { "alt" : data.image_text.alt,"src" : data.image_text.src } );
 		$( "#car .txtArea" ).find( "a" ).attr( { "href" : data.image_text.href } ).find( "strong" ).html( data.image_text.alt );
 		var arr = [];
 		for( var i = 0; i < data.news.length; i++ ) {
@@ -222,8 +218,8 @@
 	} );
 	jqxhr.fail( function() { console.log( "carPnl Error" );} );
 	/*体育面板*/
-	$.getJSON( imgSrc+"ajax/pe.json" ).done( function( data ) {
-		$( "#pe .imgArea" ).find( "a" ).attr( "href",data.image_text.href ).find( "img" ).attr( { "src" : 'src/' + data.image_text.src,"alt" : data.image_text.alt } );
+	$.getJSON( "ajax/pe.json" ).done( function( data ) {
+		$( "#pe .imgArea" ).find( "a" ).attr( "href",data.image_text.href ).find( "img" ).attr( { "src" : data.image_text.src,"alt" : data.image_text.alt } );
 		$( "#pe .txtArea" ).find( "a > strong" ).html( data.image_text.alt )
 		var newsC = data.news;
 		var newsCL = newsC.length;
@@ -267,11 +263,11 @@
 	var housexhr = $.ajax( {
 		method   : "GET",
 		type     : "GET",
-		url      : imgSrc+"ajax/house.json",
+		url      : "ajax/house.json",
 		dataType : "json"
 	} );
 	housexhr.done( function( data ) {
-		$( "#house .imgArea" ).find( "a" ).attr( "href",data.image_text.href ).find( "img" ).attr( { "alt" : data.image_text.alt,"src" : 'src/' + data.image_text.src } );
+		$( "#house .imgArea" ).find( "a" ).attr( "href",data.image_text.href ).find( "img" ).attr( { "alt" : data.image_text.alt,"src" : data.image_text.src } );
 		$( "#house .txtArea" ).find( "a" ).attr( { "href" : data.image_text.href } ).find( "strong" ).html( data.image_text.alt );
 		var arr = [];
 		for( var i = 0; i < data.news.length; i++ ) {
@@ -302,22 +298,22 @@
 	 中栏内容一加载
 	 ********/
 	/*娱乐面板*/
-	$.getJSON( imgSrc+"ajax/amusement.json" ).done( function( data ) {
+	$.getJSON( "ajax/amusement.json" ).done( function( data ) {
 		imgArea( data,"#amusement");
 		txt(data,"#amusement",".imgTtl","news",6);
 		txt(data,"#amusement",".txt","newsRight",9);
 	} );
 	/*阅读面板*/
-	$.getJSON( imgSrc+"ajax/book.json" ).done( function( data ) {
+	$.getJSON( "ajax/book.json" ).done( function( data ) {
 		var str="";
 		$.each(data.books,function( key,value ) {
-			str+='<a href="'+value.href+'"><img alt="' +value.alt+'" src="'+imgSrc+value.src+'"></a>&nbsp';
+			str+='<a href="'+value.href+'"><img alt="' +value.alt+'" src="'+value.src+'"></a>&nbsp';
 		})
 		$("#books .imgTtl").find("div").html(str);
 		txt(data,"#books",".imgTtl","news",6);
 	} );
 	/*IT面板*/
-	$.getJSON( imgSrc+"ajax/it.json" ).done( function( data ) {
+	$.getJSON( "ajax/it.json" ).done( function( data ) {
 		imgArea( data,"#it",0);
 		txt(data,"#it",".imgTtl","news",6,0);
 		imgArea( data,"#it",1);
@@ -325,7 +321,7 @@
 	} );
 	
 	/*文化面板*/
-	$.getJSON( imgSrc+"ajax/culture.json" ).done( function( data ) {
+	$.getJSON( "ajax/culture.json" ).done( function( data ) {
 		imgArea( data,"#culture");
 		txt(data,"#culture",".imgTtl","news",6);
 	} );
@@ -335,33 +331,33 @@
 	 ********/
 	
 	/*时尚面板*/
-	$.getJSON( imgSrc+"ajax/fashion.json" ).done( function( data ) {
+	$.getJSON( "ajax/fashion.json" ).done( function( data ) {
 		imgArea( data,"#fashion");
 		txt(data,"#fashion",".imgTtl","news",6);
 	} );
 	/*大家面板*/
-	$.getJSON( imgSrc+"ajax/people.json" ).done( function( data ) {
+	$.getJSON( "ajax/people.json" ).done( function( data ) {
 		imgArea( data,"#people");
 		txt(data,"#people",".imgTtl","news",6);
 	} );
 	
 	/*星座面板*/
-	$.getJSON( imgSrc+"ajax/constellation.json" ).done( function( data ) {
+	$.getJSON( "ajax/constellation.json" ).done( function( data ) {
 		imgArea( data,"#constellation");
 		txt(data,"#constellation",".imgTtl","news",6);
 	} );
 	
 	/*教育面板*/
-	$.getJSON( imgSrc+"ajax/education.json" ).done( function( data ) {
+	$.getJSON( "ajax/education.json" ).done( function( data ) {
 		imgArea( data,"#education");
 		txt(data,"#education",".imgTtl","news",6);
 	} );
 	
 	/*儿童面板*/
-	$.getJSON( imgSrc+"ajax/children.json" ).done( function( data ) {
+	$.getJSON( "ajax/children.json" ).done( function( data ) {
 		var str="";
 		$.each(data.childrens,function( key,value ) {
-			str+='<a href="'+value.href+'"><img alt="' +value.alt+'" src="'+imgSrc+value.src+'"></a>&nbsp';
+			str+='<a href="'+value.href+'"><img alt="' +value.alt+'" src="'+value.src+'"></a>&nbsp';
 		})
 		$("#children .imgTtl").find("div").html(str);
 		txt(data,"#children",".imgTtl","news",6);
@@ -371,43 +367,43 @@
 	 中栏内容三加载
 	 ********/
 	/*军事*/
-	$.getJSON( imgSrc+"ajax/war.json" ).done( function( data ) {
+	$.getJSON( "ajax/war.json" ).done( function( data ) {
 		imgArea( data,"#war");
 		txt(data,"#war",".imgTtl","news",6);
 	} );
 	/*游戏*/
-	$.getJSON( imgSrc+"ajax/acg.json" ).done( function( data ) {
+	$.getJSON( "ajax/acg.json" ).done( function( data ) {
 		imgArea( data,"#acg");
 		txt(data,"#acg",".imgTtl","news",6);
 	} );
 	/*订阅*/
-	$.getJSON( imgSrc+"ajax/order.json" ).done( function( data ) {
+	$.getJSON( "ajax/order.json" ).done( function( data ) {
 		imgArea( data,"#order");
 		txt(data,"#order",".imgTtl","news",6);
 	} );
 	/*社会*/
-	$.getJSON( imgSrc+"ajax/social.json" ).done( function( data ) {
+	$.getJSON( "ajax/social.json" ).done( function( data ) {
 		imgArea( data,"#social");
 		txt(data,"#social",".imgTtl","news",6);
 	} );
 	
 	/*宗教*/
-	$.getJSON( imgSrc+"ajax/religion.json" ).done( function( data ) {
+	$.getJSON( "ajax/religion.json" ).done( function( data ) {
 		imgArea( data,"#religion");
 		txt(data,"#religion",".imgTtl","news",6);
 	} );
 	/*美食*/
-	$.getJSON( imgSrc+"ajax/food.json" ).done( function( data ) {
+	$.getJSON( "ajax/food.json" ).done( function( data ) {
 		imgArea( data,"#food");
 		txt(data,"#food",".imgTtl","news",3);
 	} );
 	/*生活*/
-	$.getJSON( imgSrc+"ajax/life.json" ).done( function( data ) {
+	$.getJSON( "ajax/life.json" ).done( function( data ) {
 		imgArea( data,"#life");
 		txt(data,"#life",".imgTtl","news",3);
 	} );
 	/*腾讯*/
-	$.getJSON( imgSrc+"ajax/tx.json" ).done( function( data ) {
+	$.getJSON( "ajax/tx.json" ).done( function( data ) {
 		txt(data,"#tx",".imgTtl","txs",6);
 	} );
 })();
