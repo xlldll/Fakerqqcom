@@ -37,4 +37,9 @@
 - 注意sass grunt编译的文件名不要太多点号
   - 可以用横杠取代 -
   - 增加extdot:last设置
-  
+- Grunt is not defined
+  - 注意传递进分拆的grunt参数
+- Required config property "cssmin.Css2MultSync" missing.
+  - 任务名称的大小写
+- No newer files to process.
+  - newer:cssmin 多重文件依赖不适合newer

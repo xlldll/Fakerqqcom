@@ -14,7 +14,8 @@ module.exports = {
 	},
 	css2MultSync : {
 		files : {
-			'dist/css/indexRbs.min.css' : [ '<%=paths.src.css2MultSync%>/replaceBootstrap.css',
+			'dist/css/indexRbs.min.css' : [
+				'<%=paths.src.css2MultSync%>/replaceBootstrap.css',
 				'<%=paths.src.css2MultSync%>/index.css'
 			]
 		}

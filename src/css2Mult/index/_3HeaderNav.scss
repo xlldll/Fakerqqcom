@@ -61,7 +61,7 @@
 					margin: 0 3px 0 4px;
 					@extend %fontFamArialNar;
 					/*绝对定位背景不适合CssSprite*/
-					@include bg($imgUrl: 'images/3HeaderNav/arrowDown.png',$h:32px,$v:10px, $clr: #3d95d5);
+					@include bg($imgUrl: '3HeaderNav/arrowDown.png',$h:32px,$v:10px, $clr: #3d95d5);
 					
 					&:link, &:visited {
 						color: $textClr;

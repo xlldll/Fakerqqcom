@@ -4,6 +4,7 @@ module.exports = function( grunt ) {
 	var configs = require( 'load-grunt-configs' )( grunt );
 	grunt.config.init( configs );
 	require( 'load-grunt-tasks' )( grunt );
+	
 	grunt.registerTask( "mylive",[ "concurrent:mylive" ] );
 	grunt.registerTask( 'default',[ 'connect','watch' ] );
 	/* 1.项目准备 */
