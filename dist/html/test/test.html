@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>tst</title>
+	<script src = "jquery.js"></script>
+</head>
+<body>
+<div id="a" style="width:200px;border:1px solid red;text-align:center;">
+	<div id="b" style="background-color:blue;width:30px;">&nbsp;</div>
+</div>
+
+<div id="C" style="width:200px;border:1px solid red;text-align:center;">
+	<div id="D" style="background-color:blue;width:30px;margin:0 auto">&nbsp;</div>
+</div>
+<script>
+	document.onclick=function(e){
+		e=e||window.event;
+		var o=e.srcElement||e.target;
+		alert(o.tagName);
+	}
+	
+	var handle = function(a){
+		var b = 3;
+		var tmp = function(a){
+			b = a + b;
+			return tmp;
+		}
+		tmp.toString= function(){
+			return b;
+		};
+		return tmp;
+	}
+	alert(handle(4)(5)(6));
+	
+	var arr=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+	var test = (function(a){
+		this.a = a;
+		return function(b){
+			return this.a + b;
+		}
+	}(function(a,b){
+		return a;
+	}(1,2)));
+	console.log(test(1));
+	function log( text ) {
+		console.log.call(this,text);
+	}
+	log("nohting")
+</script>
+</body>
+</html>
