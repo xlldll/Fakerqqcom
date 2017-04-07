@@ -266,7 +266,7 @@ body {
   background-origin border-box|padding-box|content-box
   background-clip border-box|padding-box|content-box
   */
-  background: transparent url("../images/1header/tencentWeb_logo.png") no-repeat scroll 50% 50%;
+  background: transparent url("../images/1Header/tencentWeb_logo.png") no-repeat scroll 50% 50%;
   -webkit-background-size: auto;
   background-size: auto;
   -webkit-background-origin: padding-box;
@@ -292,7 +292,7 @@ body {
   background-origin border-box|padding-box|content-box
   background-clip border-box|padding-box|content-box
   */
-  background: transparent url("../images/1header/sogouSearch_logo.png") no-repeat scroll 50% 50%;
+  background: transparent url("../images/1Header/sogouSearch_logo.png") no-repeat scroll 50% 50%;
   -webkit-background-size: contain;
   background-size: contain;
   -webkit-background-origin: padding-box;
